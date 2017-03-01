@@ -1,0 +1,52 @@
+#projects #card-container .modal .wrapper {
+  width: 100%;
+  padding-bottom: 75px; }
+
+#projects #card-container .card-box:nth-child(1) .card-div:nth-child(1) .title {
+  padding-bottom: 0; }
+
+#projects #card-container .card-box .card-div {
+  cursor: pointer;
+  display: flex !important;
+  text-align: center; }
+  #projects #card-container .card-box .card-div .title {
+    font-size: 24px;
+    text-decoration: none;
+    z-index: 100;
+    position: relative;
+    color: #0d2636; }
+
+#projects #card-container .card-box .overlay {
+  background: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background .5s ease-in; }
+
+#projects #card-container .card-div:hover .overlay {
+  background: white; }
+
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  #projects #card-container .wrapper {
+    width: 80%; } }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  #projects #card-container .wrapper {
+    width: 90%; } }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  #projects #card-container {
+    top: 70px; }
+    #projects #card-container .wrapper {
+      width: 100%; }
+      #projects #card-container .wrapper .project-modal .container {
+        margin-top: 75px; }
+    #projects #card-container .card-box .card-div .hover {
+      bottom: 8px;
+      font-size: 8px; } }

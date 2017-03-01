@@ -1,0 +1,110 @@
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+  #about {
+    #card-container {
+      .card-box:nth-child(2) .card-div:nth-child(3){
+        .title {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+  #about {
+    #card-container {
+      .wrapper {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+  #about {
+    #card-container {
+      .card-box {
+        min-height: 0;
+      }
+      .card-box:nth-child(1) .card-div:nth-child(2) {
+        display: none;
+      }
+
+      .card-box:nth-child(2) .title, .card-box:nth-child(3) .title {
+        font-size: 16px;
+      }
+
+      .card-box:nth-child(2) .card-div:nth-child(3) .title {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 576px) {
+  #about {
+    #card-container {
+      .card-box:nth-child(2) .card-div:nth-child(3) .title {
+        font-size: 14px;
+      }
+
+      .card-box:nth-child(1) {
+        .title {
+          font-size: 28px;
+        }
+        .sub-title {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  #about {
+    #card-container {
+      top: 70px;
+
+      .card-box {
+        height: auto;
+      }
+
+      .card-box:nth-child(1) {
+        .title {
+          font-size: 24px;
+        }
+        .sub-title {
+          font-size: 20px;
+        }
+
+        .card-div:nth-child(1) {
+          min-height: 130px;
+        }
+      }
+      
+      .card-box:nth-child(2), .card-box:nth-child(3) {
+        .card-div {
+          flex:0 0 98% !important;
+          min-height: 100px;
+
+          .title {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .card-box:nth-child(2) .card-div:nth-child(3) .title {
+        font-size: 18px;
+      }
+
+      .card-box:nth-child(3) .card-div:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+}

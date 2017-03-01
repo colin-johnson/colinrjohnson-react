@@ -1,0 +1,25 @@
+/*--------------------------------------
+         BASE
+---------------------------------------*/
+#main {
+  background-image: url('../images/home-bg.jpg');
+  background-size: cover;
+  @include full-screen();
+  color:$grey;
+  font-family: $base-font-family;
+  font-weight: $regular;
+}
+
+#overlay {
+  position: absolute;
+  z-index: 10000;
+  width:100vw;
+  height:100vh;
+  background-color:white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:$pink;
+  font-size:36px;
+}
+
