@@ -16,6 +16,12 @@
     min-height: 100px;
     align-items: center;
     flex-wrap: wrap;
+    line-height: 30px;
+
+    .modal-body--p {
+      min-width: 100px;
+      text-align: center;
+    }
   }
 
   .modal-dialog {

@@ -4,8 +4,8 @@
 import React, { Component } from 'react';
 
 let size;
-const w = (window.innerWidth / 4) * 3;
-const w2 = (window.innerWidth / 4) / 2;
+const w = (window.innerWidth / 4) * 3; // 3/4 of window width
+const w2 = (window.innerWidth / 4) / 2; //
 const h = (window.innerHeight / 4) * 2;
 const colors = ['#411919', '#BCBCBC', '#44647B', '#979871', '#9B1516'];
 

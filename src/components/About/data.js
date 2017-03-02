@@ -12,7 +12,7 @@ const data = {
   },
   tools: {
     title: 'Tools & Plugins',
-    content: ['Redux', 'React-Router', 'ReactCSS', 'Aesthetic', 'NPM'],
+    content: ['Redux', 'React-Router', 'ReactCSS', 'Aesthetic', 'NPM', 'Webpack', 'Browserify', 'ESLint', 'GSAP', 'Flowtype', 'Babel', '..and more'],
   },
   contact: {
     title: 'Say Hello',

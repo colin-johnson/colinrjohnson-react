@@ -19,7 +19,7 @@ export default class AnimatedCircles extends Component {
     const circleHolder = [];
 
     for (let i = 0; i < this.randomNumber(4, 4); i++) {
-      circleHolder.push((<Circle />));
+      circleHolder.push((<Circle key={i} />));
     }
 
     return (
