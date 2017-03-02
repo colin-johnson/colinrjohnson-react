@@ -25,8 +25,8 @@ export default class Circle extends Component {
     setTimeout(() => {
       this.setState({
         top: this.randomNumber(h, 0),
-        left: this.randomNumber(w + w2, 0),
-        transition: this.randomNumber(30, 25),
+        left: this.randomNumber(w, 0),
+        transition: this.randomNumber(55, 50),
       });
     }, 10);
   }
@@ -35,8 +35,8 @@ export default class Circle extends Component {
     setTimeout(() => {
       this.setState({
         top: this.randomNumber(h, 0),
-        left: this.randomNumber(w + w2, 0),
-        transition: this.randomNumber(30, 25),
+        left: this.randomNumber(w2, 0),
+        transition: this.randomNumber(55, 50),
       });
     }, this.state.transition * 1000);
   }
@@ -46,15 +46,26 @@ export default class Circle extends Component {
   }
 
   render() {
-    size = this.randomNumber(85, 80);
+    if (window.innerWidth <= 480) {
+      size = this.randomNumber(55, 50);
+    } else if (window.innerWidth <= 768 && window.innerWidth > 480) {
+      size = this.randomNumber(65, 60);
+    } else if (window.innerWidth <= 992 && window.innerWidth > 768) {
+      size = this.randomNumber(75, 70);
+    } else {
+      size = this.randomNumber(85, 80);
+    }
 
     const style = {
       width: `${size}px`,
       height: `${size}px`,
       opacity: '0.7',
       filter: `blur(${this.randomNumber(7, 5)}px)`,
+      WebkitFilter: `blur(${this.randomNumber(7, 5)}px)`,
       backgroundColor: `${colors[this.randomNumber(5, 1) - 1]}`,
       transform: `translate(${this.state.left}px, ${this.state.top}px)`,
+      WebkitTransform: `translate(${this.state.left}px, ${this.state.top}px)`,
+      msTransform: `translate(${this.state.left}px, ${this.state.top}px)`,
       transition: `all ${this.state.transition}s ease-in-out`,
     };
 

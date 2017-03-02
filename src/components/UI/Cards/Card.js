@@ -22,13 +22,11 @@ export default class Card extends Component {
   }
 
   render() {
-    let style = {
+    const style = {
       flex: `${this.props.flex ? this.props.flex : '4'}`,
-      margin: '1%',
-      padding: '5%',
-      alignItems: 'center',
-      justifyContent: 'center',
-      position: 'relative',
+      WebkitBoxFlex: `${this.props.flex ? this.props.flex : '4'}`,
+      WebkitFlex: `${this.props.flex ? this.props.flex : '4'}`,
+      msFlex: `${this.props.flex ? this.props.flex : '4'}`,
       top: `${this.state.top}px`,
       opacity: `${this.state.opacity}`,
       transition: 'all 1s ease-in-out',

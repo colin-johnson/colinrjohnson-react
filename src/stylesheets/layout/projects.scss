@@ -18,6 +18,10 @@
       .card-div {
         cursor: pointer;
         display: flex !important;
+        display: -webkit-box !important;
+        display: -moz-box !important;
+        display: -ms-flexbox !important;
+        display: -webkit-flex !important;
         text-align: center;
 
         .title {

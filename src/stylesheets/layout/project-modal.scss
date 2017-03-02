@@ -7,6 +7,10 @@
   visibility: hidden;
   background-color: rgba(24,75,92,0.7);
   display: flex !important;
+  display: -webkit-box !important;
+  display: -moz-box !important;
+  display: -ms-flexbox !important;
+  display: -webkit-flex !important;
 
   .container {
     margin-top: 100px;
@@ -37,9 +41,14 @@
     }
 
     .modal-flex {
-      display: flex;
-      align-items:center;
+      @include flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: space-around;
+      -ms-flex-pack: space-around;
       justify-content: space-around;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       padding: 15px;
       line-height: 30px;

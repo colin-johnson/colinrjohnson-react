@@ -6,7 +6,6 @@
  */
 import React, { Component } from 'react';
 
-
 export default class ImageCard extends Component {
   constructor(props) {
     super(props);
@@ -26,7 +25,7 @@ export default class ImageCard extends Component {
   }
 
   render() {
-    let style = {
+    const style = {
       backgroundColor: 'rgba(255,255,255,0.8)',
       backgroundImage: `url('${this.props.img}')`,
       backgroundSize: 'contain',
@@ -35,13 +34,16 @@ export default class ImageCard extends Component {
       margin: '1%',
       height: '96%',
       flex: '4',
+      WebkitBoxFlex: '4',
+      WebkitFlex: '4',
+      msFlex: '4',
       alignItems: 'center',
       display: `${this.props.display}`,
       justifyContent: 'center',
       position: 'relative',
       top: `${this.state.top}px`,
       opacity: `${this.state.opacity}`,
-      transition: 'all 1s ease-in-out'
+      transition: 'all 1s ease-in-out',
     };
 
     return (

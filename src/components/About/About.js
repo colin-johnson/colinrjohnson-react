@@ -19,8 +19,8 @@ export default class About extends Component {
   componentDidMount() {
     if (window.innerWidth >= 480) this.determineCardWidth();
 
-    const contactButton = document.getElementsByClassName('contact-button');
-    setTimeout(() => Object.assign(contactButton[0].style, { top: '0', opacity: 1 }), 4000);
+    // const contactButton = document.getElementsByClassName('contact-button');
+    // setTimeout(() => Object.assign(contactButton[0].style, { top: '0', opacity: 1 }), 4000);
   }
 
   componentWillUpdate() {

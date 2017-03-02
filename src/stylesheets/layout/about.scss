@@ -1,3 +1,36 @@
+#about {
+
+  #card-container {
+    .card-box:nth-child(1) .card-div:nth-child(1) {
+      -webkit-box-pack: flex-start;
+      -ms-flex-pack: flex-start;
+      justify-content: flex-start;
+
+      .title {
+        padding-bottom: 15px;
+      }
+    }
+
+    .contact-button {
+      background-color: $pink;
+      color: white;
+      margin: 1%;
+      @include horizontal-align;
+      height: 80px;
+      position: relative;
+      font-size: 24px;
+      transition: all 1s ease-in-out;
+      cursor: pointer;
+      opacity: 0;
+      top: 50px;
+      @include box-shadow;
+    }
+
+    .contact-button:hover {
+      background-color: #cd3e45;
+    }
+  }
+}
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
   #about {

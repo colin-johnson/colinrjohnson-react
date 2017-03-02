@@ -16,9 +16,7 @@
   width:100vw;
   height:100vh;
   background-color:white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include horizontal-align;
   color:$pink;
   font-size:36px;
 }

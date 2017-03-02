@@ -36,12 +36,12 @@ export default class ProjectModal extends Component {
                   <div className="modal-body">
                     <h5>Responsibilities</h5>
                     <div className="modal-flex">
-                      {responsibilities.map(a => (<p>{a}</p>))}
+                      {responsibilities.map((a, index) => (<p key={index}>{a}</p>))}
                     </div>
 
                     <h5>Technologies</h5>
                     <div className="modal-flex">
-                      {technologies.map(a => (<p>{a}</p>))}
+                      {technologies.map((a, index) => (<p key={index}>{a}</p>))}
                     </div>
                   </div>
 
@@ -70,6 +70,6 @@ export default class ProjectModal extends Component {
 ProjectModal.propTypes = {
   isOpen: React.PropTypes.bool,
   closeModal: React.PropTypes.func,
-  body: React.PropTypes.string,
+  body: React.PropTypes.object,
   title: React.PropTypes.string,
 };

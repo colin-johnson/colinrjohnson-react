@@ -6,13 +6,11 @@
   width:100%;
   height:100%;
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include horizontal-align;
   z-index:2;
 
   .banner {
-    @include center-align();
+    @include horizontal-align;
     width:45%;
     //margin-top:100px;
     background-color: $opaque;
@@ -20,9 +18,14 @@
     opacity: 0;
     position: absolute;
     @include box-shadow;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto auto;
 
     .banner-copy {
-      display: flex;
+      @include flex;
       font-size: 24px;
 
       .plus {
@@ -44,9 +47,15 @@
   0% {
     opacity: 0;
     transform: translateY(50px);
+    -webkit-transform: translateY(50px);
+    -ms-transform: translateY(50px);
   }
   25% {  opacity: 1;  }
-  40% {  transform: translateY(0);  }
+  40% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+  }
   75% {  opacity: 1;  }
   100% {  opacity: 0;  }
 }

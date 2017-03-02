@@ -2,13 +2,11 @@
   width:100%;
   position: absolute;
   //background: $opaque;
-  z-index: $top;
+  z-index: 1000;
   height:30px;
 
   .row {
-    @include flex();
-    align-items: center;
-    justify-content: center;
+    @include horizontal-align;
   }
 
   .nav-menu-container {
@@ -20,7 +18,9 @@
       font-size: 13px;
       line-height: 30px;
       transition: all .3s ease;
-      display: flex;
+      @include flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       color: white;
       text-decoration: none;
@@ -31,10 +31,6 @@
       cursor: pointer;
       color:$pink;
     }
-
-    //#projects:hover, #about:hover {
-    //  background:white;
-    //}
   }
 
   #home-btn {
@@ -47,10 +43,6 @@
     background-size: contain;
     position: relative;
   }
-
-  //#projects-btn, #about-btn {
-  //  opacity: 0;
-  //}
 
   .active {
     color:$pink !important;

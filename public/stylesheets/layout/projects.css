@@ -10,6 +10,10 @@
   #projects #card-container .card-box .card-div {
     cursor: pointer;
     display: flex !important;
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
     text-align: center; }
     #projects #card-container .card-box .card-div .title {
       font-size: 24px;

@@ -15,21 +15,23 @@
   }
 
   .card-box {
-    display: flex;
+    @include flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+
     height: 33.33%;
     min-height: 140px;
   }
 
-  .card-box:nth-child(1) .card-div:nth-child(1) .title {
-    padding-bottom: 15px;
-  }
-
   .card-box:nth-child(2), .card-box:nth-child(3) {
     .card-div {
-      display: flex;
+      @include flex;
       cursor: pointer;
 
       .title {
@@ -44,6 +46,7 @@
   }
 
   .card-div {
+    @include flex;
     @include box-shadow;
     transition: background-color .3s ease-in;
     background-color: rgba(255,255,255,0.8);
@@ -52,7 +55,11 @@
     margin: 1%;
     height: 96%;
     padding: 5%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     position: relative;
   }
@@ -70,6 +77,9 @@
     bottom: 20px;
     z-index: 1;
     font-size: 12px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 
   .card-div:hover p.hover {

@@ -26,9 +26,9 @@ const Modal = ({ isOpen, closeModal, title, body }) => {
               </div>
 
               <div className="modal-body">
-                {body.map(a => (<p className="modal-body--p">{a}</p>))}
-                {body.map(a => (a.includes('*')) ?
-                  <p className="asterisk">* denotes basic knowledge</p> : null)}
+                {body.map((a, index) => (<p className="modal-body--p" key={index}>{a}</p>))}
+                {body.map((a, index) => (a.includes('*')) ?
+                  <p key={index} className="asterisk">* denotes basic knowledge</p> : null)}
               </div>
 
             </div>
