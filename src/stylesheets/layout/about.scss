@@ -65,6 +65,17 @@
 }
 
 /* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+  #about {
+    #card-container {
+      .card-box {
+        max-height: 200px;
+      }
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
   #about {
     #card-container {

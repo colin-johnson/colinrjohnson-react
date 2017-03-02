@@ -7,14 +7,6 @@ const Modal = ({ isOpen, closeModal, title, body }) => {
   const componentClasses = ['modal', 'default-modal'];
   if (isOpen) { componentClasses.push('show'); }
 
-  function parseBody(data) {
-    if (typeof data === 'string') {
-      return data.split(',').map(a => (<p className="modal-body--p">{a}</p>));
-    } else {
-      return data();
-    }
-  }
-
   return (
     <div className={componentClasses.join(' ')} role="dialog">
       <div className="container">
@@ -34,11 +26,9 @@ const Modal = ({ isOpen, closeModal, title, body }) => {
               </div>
 
               <div className="modal-body">
-                {parseBody(body)}
-                {typeof body === 'string' ?
-                  (body.includes('*')) ?
-                    <p className="asterisk">* denotes basic knowledge</p> :
-                    null : null}
+                {body.map(a => (<p className="modal-body--p">{a}</p>))}
+                {body.map(a => (a.includes('*')) ?
+                  <p className="asterisk">* denotes basic knowledge</p> : null)}
               </div>
 
             </div>

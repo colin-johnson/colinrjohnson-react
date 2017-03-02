@@ -4,15 +4,15 @@
 const data = {
   languages: {
     title: 'Languages',
-    content: 'Javascript/ES6,HTML5,CSS3,Git',
+    content: ['Javascript/ES6', 'HTML5', 'CSS3', 'Git', 'PHP*', 'Node*'],
   },
   frameworks: {
     title: 'Frameworks',
-    content: 'React,Meteor*,Bootstrap,React Native,Jquery',
+    content: ['React', 'React Native', 'SASS', 'Bootstrap', 'Jquery', 'Meteor*'],
   },
   tools: {
     title: 'Tools & Plugins',
-    content: 'Redux,React-Router,LoDash,ReactCSS,Aesthetic',
+    content: ['Redux', 'React-Router', 'ReactCSS', 'Aesthetic', 'NPM'],
   },
   contact: {
     title: 'Say Hello',

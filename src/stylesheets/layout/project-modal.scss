@@ -40,13 +40,10 @@
       display: flex;
       align-items:center;
       justify-content: space-around;
+      flex-wrap: wrap;
       padding: 15px;
+      line-height: 30px;
     }
-    //
-    //.modal-flex.divider {
-    //  padding: 15px 15px 30px 15px;
-    //  border-bottom: 1px solid #e5e5e5;
-    //}
   }
 
   .modal-dialog {
@@ -68,10 +65,12 @@
     opacity: 1;
   }
 
+  .close:focus { outline:0; }
+
   .project-modal-img {
     width: 98%;
     margin: 1%;
-    //@include box-shadow();
+    @include box-shadow();
   }
 }
 

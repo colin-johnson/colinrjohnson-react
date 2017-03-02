@@ -10,16 +10,10 @@ export default class About extends Component {
     super(props);
     this.state = {
       isModalOpen: false,
-      modalTitle: '',
-      modalBody: '',
+      modalTitle: data.languages.title,
+      modalBody: data.languages.content,
       cardHeight: '',
     };
-  }
-
-  componentWillUpdate() {
-    window.addEventListener('resize', () => {
-      if (window.innerWidth >= 480) this.determineCardWidth();
-    }, true);
   }
 
   componentDidMount() {
@@ -27,6 +21,12 @@ export default class About extends Component {
 
     const contactButton = document.getElementsByClassName('contact-button');
     setTimeout(() => Object.assign(contactButton[0].style, { top: '0', opacity: 1 }), 4000);
+  }
+
+  componentWillUpdate() {
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 480) this.determineCardWidth();
+    }, true);
   }
 
   determineCardWidth() {
@@ -110,9 +110,9 @@ export default class About extends Component {
 
           </div>
 
-          <div className="contact-button" onClick={() => this.openModal(data.contact)}>
+          {/* <div className="contact-button" onClick={() => this.openModal(data.contact)}>
             <p>Contact</p>
-          </div>
+          </div> */}
 
           <Modal
             isOpen={this.state.isModalOpen}
