@@ -4,6 +4,20 @@
 import React, { Component } from 'react';
 
 export default class ProjectModal extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      height: (((80 / 100) * window.innerHeight) - 70),
+    };
+  }
+
+
+  componentDidMount() {
+    window.addEventListener('resize', () => {
+      this.setState({ height: (((80 / 100) * window.innerHeight) - 70) });
+    }, true);
+  }
+
   render() {
     const responsibilities = this.props.body.responsibilities;
     const technologies = this.props.body.technologies;
@@ -25,7 +39,7 @@ export default class ProjectModal extends Component {
               {this.props.title}
             </h4>
           </div>
-          <div className="wrapper">
+          <div style={{ height: this.state.height }} id="wrapper1" className="wrapper">
             <div className="modal-dialog">
               <div className="modal-data">
                 <div className="modal-body">

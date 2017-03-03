@@ -26,6 +26,7 @@ export default class Projects extends Component {
 
   closeModal() {
     this.setState({ isModalOpen: false });
+    setTimeout(() => { document.getElementById('wrapper1').scrollTop = 0; }, 1000);
   }
 
   renderContent(projectData, fade) {

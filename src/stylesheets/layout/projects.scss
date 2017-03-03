@@ -4,7 +4,6 @@
     .modal {
       .wrapper {
         width: 100%;
-        padding-bottom: 75px;
       }
     }
 
@@ -81,12 +80,18 @@
 }
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width : 576px) {
   #projects {
     #card-container {
       top: 70px;
+    }
+  }
+}
 
-
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  #projects {
+    #card-container {
       .wrapper {
         width:100%;
 

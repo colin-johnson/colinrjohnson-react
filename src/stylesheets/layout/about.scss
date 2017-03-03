@@ -81,6 +81,8 @@
 @media only screen and (max-width : 576px) {
   #about {
     #card-container {
+      top: 70px;
+
       .card-box:nth-child(2) .card-div:nth-child(3) .title {
         font-size: 14px;
       }
@@ -112,7 +114,6 @@
 @media only screen and (max-width : 480px) {
   #about {
     #card-container {
-      top: 70px;
 
       .card-box {
         height: auto;

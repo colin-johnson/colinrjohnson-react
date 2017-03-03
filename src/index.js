@@ -10,8 +10,8 @@ ReactDOM.render((
   <Router history={browserHistory}>
     <Route path="/" component={MainLayout}>
       <IndexRoute component={Home} />
-      <Route path="about" component={About} />
-      <Route path="projects" component={Projects} />
+      <Route path="/about" component={About} />
+      <Route path="/projects" component={Projects} />
     </Route>
   </Router>
 ), document.getElementById('main'));
