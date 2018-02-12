@@ -2,8 +2,7 @@
          BASE
 ---------------------------------------*/
 #main {
-  background-image: url('../images/home-bg.jpg');
-  background-size: cover;
+  background: white;
   @include full-screen();
   color:$grey;
   font-family: $base-font-family;
@@ -20,4 +19,3 @@
   color:$pink;
   font-size:36px;
 }
-
