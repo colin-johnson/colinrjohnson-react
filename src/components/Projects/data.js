@@ -95,20 +95,6 @@ const data = {
       href: 'http://southbaytrainer.com/',
     },
   },
-  projectEight: {
-    title: 'ShareholderApp',
-    image: '../images/projects/sharholder2.jpg',
-    content: {
-      summary: 'ShareholderApp is an app that shares the latest in stock trades ' +
-      'to its shareholders. By submitting the UI/UX design and branding I was ' +
-      'hired to build the website for the app. After creating the design it ' +
-      'enabled me to build out a one page parallax website the client was ecstatic for.',
-      responsibilities: ['Front End Development', 'UI/UX Design', 'Branding'],
-      technologies: ['HTML5', 'CSS3', 'Javascript', 'Jquery', 'PHP'],
-      image: '../images/projects/share.png',
-      href: 'http://shareholderapp.com/',
-    },
-  },
 }
 
 export default data;

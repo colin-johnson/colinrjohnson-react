@@ -47,7 +47,7 @@
 
   .card-div {
     @include flex;
-    @include box-shadow;
+    // @include box-shadow;
     transition: background-color .3s ease-in;
     background-color: rgba(255,255,255,0.8);
     background-size: cover;
@@ -101,4 +101,3 @@
     float: left;
   }
 }
-

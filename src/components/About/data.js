@@ -1,23 +1,24 @@
 /**
  * Created by colinjohnson on 2/11/17.
  */
-const data = {
-  languages: {
+const data = [
+  {
     title: 'Languages',
-    content: ['Javascript/ES6', 'HTML5', 'CSS3', 'Git', 'PHP*', 'Node*'],
+    content: ['Javascript/ES6', 'HTML5', 'CSS3', 'Git', 'PHP', 'Node'],
+    description: '',
   },
-  frameworks: {
+  {
     title: 'Frameworks',
-    content: ['React', 'React Native', 'SASS', 'Bootstrap', 'Jquery', 'Meteor*'],
+    content: ['React', 'React Native', 'Express', 'SASS', 'Bootstrap', 'Jquery'],
   },
-  tools: {
+  {
     title: 'Tools & Plugins',
-    content: ['Redux', 'React-Router', 'ReactCSS', 'Aesthetic', 'NPM', 'Webpack', 'Browserify', 'ESLint', 'GSAP', 'Flowtype', 'Babel', '..and more'],
+    content: ['Redux', 'React-Router', 'ReactCSS', 'Aesthetic', 'NPM', 'Webpack', 'Browserify', 'ESLint', 'GSAP', 'Babel', '..and more'],
   },
-  contact: {
-    title: 'Say Hello',
-    content: '',
+  {
+    title: 'Dev Ops',
+    content: ['ghfhj'],
   },
-};
+];
 
 export default data;

@@ -11,7 +11,6 @@ const MainLayout = ({ children }) => (
     <div>
       {children}
     </div>
-    <Background />
   </div>
 );
 

@@ -1,7 +1,7 @@
 #nav-menu {
   width:100%;
   position: absolute;
-  //background: $opaque;
+  top: 15px;
   z-index: 1000;
   height:30px;
 
@@ -22,7 +22,7 @@
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center;
-      color: white;
+      color: $grey;
       text-decoration: none;
       @include transition();
     }

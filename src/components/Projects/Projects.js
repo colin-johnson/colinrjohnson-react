@@ -43,7 +43,7 @@ export default class Projects extends Component {
           <p className="hover">
             Click for project details
           </p>
-          <div className="overlay"></div>
+          <div className="overlay" />
         </Card>
       </div>
     );
@@ -52,15 +52,14 @@ export default class Projects extends Component {
   render() {
     return (
       <div id="projects">
-        <CardContainer>
+        <div className="container">
           {/* this.renderContent(data.projectOne,   0.5) */}
           {this.renderContent(data.projectTwo, 0.5)}
           {this.renderContent(data.projectThree, 1)}
-          {/* this.renderContent(data.projectFour, 1.5) */}
-          {this.renderContent(data.projectFive, 1.5)}
-          {this.renderContent(data.projectSix, 2)}
-          {this.renderContent(data.projectSeven, 2.5)}
-          {this.renderContent(data.projectEight, 3)}
+          {this.renderContent(data.projectFour, 1.5)}
+          {this.renderContent(data.projectFive, 2)}
+          {this.renderContent(data.projectSix, 2.5)}
+          {this.renderContent(data.projectSeven, 3)}
 
           <ProjectModal
             isOpen={this.state.isModalOpen}
@@ -68,7 +67,7 @@ export default class Projects extends Component {
             body={this.state.modalBody}
             closeModal={() => this.closeModal()}
           />
-        </CardContainer>
+        </div>
       </div>
     );
   }
