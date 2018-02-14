@@ -8,8 +8,10 @@ export default class About extends Component {
 
   renderData() {
     return data.map(d => (
-      <div>
-        <h2>{d.title}</h2>
+      <div className="card-box">
+        <div className="container-fluid">
+          <h2 className="title">{d.title}</h2>
+        </div>
         <ul>
           {d.content.map(a => <li>{a}</li>)}
         </ul>

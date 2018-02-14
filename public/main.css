@@ -340,11 +340,7 @@ table {
     -ms-flex-pack: center;
     justify-content: center; }
   #nav-menu .nav-menu-container {
-    flex-grow: 1;
-    -webkit-transform: skew(20deg);
-    -moz-transform: skew(20deg);
-    -o-transform: skew(20deg);
-    background: lightgrey; }
+    flex-grow: 1; }
     #nav-menu .nav-menu-container .nav-menu-button {
       position: relative;
       top: -4px;
@@ -463,98 +459,34 @@ table {
     padding-top: 10px;
     float: left; }
 
-#about #card-container .card-box:nth-child(1) .card-div:nth-child(1) {
-  -webkit-box-pack: flex-start;
-  -ms-flex-pack: flex-start;
-  justify-content: flex-start; }
-  #about #card-container .card-box:nth-child(1) .card-div:nth-child(1) .title {
-    padding-bottom: 15px; }
-
-#about #card-container .contact-button {
-  background-color: #F35D64;
-  color: white;
-  margin: 1%;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 80px;
-  position: relative;
-  font-size: 24px;
-  transition: all 1s ease-in-out;
-  cursor: pointer;
-  opacity: 0;
-  top: 50px;
-  -webkit-box-shadow: 0 1px 2px 1px rgba(59, 59, 59, 0.4);
-  -moz-box-shadow: 0 1px 2px 1px rgba(59, 59, 59, 0.4);
-  box-shadow: 0 1px 2px 1px rgba(59, 59, 59, 0.4); }
-
-#about #card-container .contact-button:hover {
-  background-color: #cd3e45; }
+#about {
+  margin-top: 100px; }
+  #about .container .card-box {
+    margin-bottom: 100px; }
+    #about .container .card-box .container-fluid {
+      width: 100%;
+      position: relative;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      justify-content: flex-start; }
+      #about .container .card-box .container-fluid .title {
+        padding: 30px;
+        margin-left: -30px;
+        background: lightgrey; }
+    #about .container .card-box ul {
+      padding: 50px; }
+      #about .container .card-box ul li {
+        padding-bottom: 30px; }
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width: 1200px) {
-  #about #card-container .card-box:nth-child(2) .card-div:nth-child(3) .title {
-    font-size: 20px; } }
-
 /* Medium Devices, Desktops */
-@media only screen and (max-width: 991px) {
-  #about #card-container .wrapper {
-    width: 100%; } }
-
 /* Small Devices, Tablets */
-@media only screen and (max-width: 767px) {
-  #about #card-container .card-box {
-    min-height: 0; }
-  #about #card-container .card-box:nth-child(1) .card-div:nth-child(2) {
-    display: none; }
-  #about #card-container .card-box:nth-child(2) .title, #about #card-container .card-box:nth-child(3) .title {
-    font-size: 16px; }
-  #about #card-container .card-box:nth-child(2) .card-div:nth-child(3) .title {
-    font-size: 15px; } }
-
 /* Extra Small Devices, Phones */
-@media only screen and (max-width: 576px) {
-  #about #card-container {
-    top: 70px; }
-    #about #card-container .card-box:nth-child(2) .card-div:nth-child(3) .title {
-      font-size: 14px; }
-    #about #card-container .card-box:nth-child(1) .title {
-      font-size: 28px; }
-    #about #card-container .card-box:nth-child(1) .sub-title {
-      font-size: 24px; } }
-
 /* Extra Small Devices, Phones */
-@media only screen and (min-width: 480px) {
-  #about #card-container .card-box {
-    max-height: 200px; } }
-
 /* Extra Small Devices, Phones */
-@media only screen and (max-width: 480px) {
-  #about #card-container .card-box {
-    height: auto; }
-  #about #card-container .card-box:nth-child(1) .title {
-    font-size: 24px; }
-  #about #card-container .card-box:nth-child(1) .sub-title {
-    font-size: 20px; }
-  #about #card-container .card-box:nth-child(1) .card-div:nth-child(1) {
-    min-height: 130px; }
-  #about #card-container .card-box:nth-child(2) .card-div, #about #card-container .card-box:nth-child(3) .card-div {
-    flex: 0 0 98% !important;
-    min-height: 100px; }
-    #about #card-container .card-box:nth-child(2) .card-div .title, #about #card-container .card-box:nth-child(3) .card-div .title {
-      font-size: 18px; }
-  #about #card-container .card-box:nth-child(2) .card-div:nth-child(3) .title {
-    font-size: 18px; }
-  #about #card-container .card-box:nth-child(3) .card-div:nth-child(2) {
-    display: none; } }
-
 .default-modal {
   -webkit-transition: 1s;
   -moz-transition: 1s;

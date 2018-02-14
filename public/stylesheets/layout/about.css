@@ -1,56 +1,20 @@
+#about {
+  margin-top: 100px; }
+  #about .container .card-box {
+    margin-bottom: 100px; }
+    #about .container .card-box .container-fluid {
+      width: 100%;
+      position: relative;
+      float: left; }
+      #about .container .card-box .container-fluid .title {
+        padding: 30px;
+        margin-left: -30px;
+        background: lightgrey;
+        float: left; }
+
 /* Large Devices, Wide Screens */
-@media only screen and (max-width: 1200px) {
-  #about #card-container .card-box:nth-child(2) .card-div:nth-child(3) .title {
-    font-size: 20px; } }
-
 /* Medium Devices, Desktops */
-@media only screen and (max-width: 991px) {
-  #about #card-container .wrapper {
-    width: 100%; } }
-
 /* Small Devices, Tablets */
-@media only screen and (max-width: 767px) {
-  #about #card-container .card-box {
-    min-height: 0; }
-  #about #card-container .card-box:nth-child(1) .card-div:nth-child(2) {
-    display: none; }
-  #about #card-container .card-box:nth-child(2) .title, #about #card-container .card-box:nth-child(3) .title {
-    font-size: 16px; }
-  #about #card-container .card-box:nth-child(2) .card-div:nth-child(3) .title {
-    font-size: 15px; } }
-
 /* Extra Small Devices, Phones */
-@media only screen and (max-width: 576px) {
-  #about #card-container .card-box:nth-child(2) .card-div:nth-child(3) .title {
-    font-size: 14px; }
-  #about #card-container .card-box:nth-child(1) .title {
-    font-size: 28px; }
-  #about #card-container .card-box:nth-child(1) .sub-title {
-    font-size: 24px; } }
-
 /* Extra Small Devices, Phones */
-@media only screen and (min-width: 480px) {
-  #about #card-container .card-box {
-    max-height: 200px; } }
-
 /* Extra Small Devices, Phones */
-@media only screen and (max-width: 480px) {
-  #about #card-container {
-    top: 70px; }
-    #about #card-container .card-box {
-      height: auto; }
-    #about #card-container .card-box:nth-child(1) .title {
-      font-size: 24px; }
-    #about #card-container .card-box:nth-child(1) .sub-title {
-      font-size: 20px; }
-    #about #card-container .card-box:nth-child(1) .card-div:nth-child(1) {
-      min-height: 130px; }
-    #about #card-container .card-box:nth-child(2) .card-div, #about #card-container .card-box:nth-child(3) .card-div {
-      flex: 0 0 98% !important;
-      min-height: 100px; }
-      #about #card-container .card-box:nth-child(2) .card-div .title, #about #card-container .card-box:nth-child(3) .card-div .title {
-        font-size: 18px; }
-    #about #card-container .card-box:nth-child(2) .card-div:nth-child(3) .title {
-      font-size: 18px; }
-    #about #card-container .card-box:nth-child(3) .card-div:nth-child(2) {
-      display: none; } }
