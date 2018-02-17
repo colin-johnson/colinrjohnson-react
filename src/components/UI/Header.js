@@ -10,6 +10,14 @@ const Header = () => {
       <div className="container">
         <div className="row">
           <div className="nav-menu-container">
+            <div className="nav-menu-container">
+              <Link
+                to="/"
+                id="home-btn"
+                activeClassName="active"
+                className="nav-menu-button"
+              />Colin Johnson
+            </div>
             <Link
               to="/projects"
               id="projects-btn"
@@ -20,20 +28,20 @@ const Header = () => {
           </div>
           <div className="nav-menu-container">
             <Link
-              to="/"
-              id="home-btn"
-              activeClassName="active"
-              className="nav-menu-button"
-            />
-          </div>
-          <div className="nav-menu-container">
-            <Link
               to="/about"
               id="about-btn"
               activeClassName="active"
               className="nav-menu-button"
             >About
             </Link>
+          </div>
+          <div className="nav-menu-container">
+            <Link
+              to="/notes"
+              id="notes-btn"
+              activeClassName="active"
+              className="nav-menu-button"
+            />
           </div>
         </div>
       </div>

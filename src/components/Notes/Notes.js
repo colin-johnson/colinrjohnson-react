@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import CardContainer from '../UI/Cards/CardContainer';
 import Card from '../UI/Cards/Card';
-import projectData from './data';
+import notesData from './data';
 
-export default class Projects extends Component {
+export default class Notes extends Component {
   constructor(props) {
     super(props);
 
-    this.renderProjects = this.renderProjects.bind(this);
+    this.renderNotes = this.renderNotes.bind(this);
   }
 
-  renderProjects() {
+  renderNotes() {
     return (
-      <div>Projects</div>
+      <div>Notes</div>
     );
   }
 
@@ -20,7 +20,7 @@ export default class Projects extends Component {
     return (
       <div id="projects">
         <div className="container">
-          {this.renderProjects()}
+          {this.renderNotes()}
         </div>
       </div>
     );

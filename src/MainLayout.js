@@ -8,9 +8,7 @@ import Background from './components/Background/AnimatedCircles';
 const MainLayout = ({ children }) => (
   <div>
     <Header />
-    <div>
-      {children}
-    </div>
+    {children}
   </div>
 );
 

@@ -1,23 +1,17 @@
 import React, { Component } from 'react';
-import data from './data';
+import aboutData from './data';
 
 export default class About extends Component {
   constructor(props) {
     super(props);
+
+    this.renderData = this.renderData.bind(this);
   }
 
   renderData() {
-    return data.map(d => (
-      <div className="card-box">
-        <div className="container-fluid">
-          <h2 className="title">{d.title}</h2>
-        </div>
-        <ul>
-          {d.content.map(a => <li>{a}</li>)}
-        </ul>
-        <p>{d.description}</p>
-      </div>
-    ));
+    return (
+      <div>About</div>
+    )
   }
 
   render() {

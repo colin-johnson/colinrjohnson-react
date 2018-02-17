@@ -1,7 +1,7 @@
 /**
  * Created by colinjohnson on 2/11/17.
  */
-const projectData = [
+const notesData = [
   {
     title: 'Instagram-Bot',
     content: {
@@ -162,4 +162,4 @@ const projectData = [
   },
 ]
 
-export default projectData;
+export default notesData;
