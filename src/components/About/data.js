@@ -15,12 +15,12 @@ const aboutData = [
         title: 'Front End',
         languages: ['Javascript/ES6', 'HTML5', 'CSS3', 'Git', 'React', 'React Native', 'SASS', 'Bootstrap', 'Jquery'],
         description: ''
-      }
+      },
       {
         title: 'Back End',
         languages: ['PHP', 'Node', 'Express'],
         description: ''
-      }
+      },
       {
         title: 'Tools',
         languages: ['Git','Redux', 'React-Router', 'ReactCSS', 'Aesthetic', 'NPM', 'Webpack', 'Browserify', 'ESLint', 'GSAP', 'Babel', '..and more'],
@@ -31,15 +31,15 @@ const aboutData = [
   {
     type: 'single',
     title: 'Selected Clients',
-    content: '',
+    content: 'Nike',
   },
   {
     type: 'single',
     title: 'Timeline',
-    content: '',
+    content: 'start',
   },
   {
-    type: 'single',
+    type: 'href',
     title: 'Resumé',
     content: '',
   },
@@ -49,7 +49,7 @@ const aboutData = [
     content: 'contact@colinrjohnson.com',
   },
   {
-    type: 'nested',
+    type: 'social',
     title: 'Social',
     content: [
       {
@@ -65,7 +65,7 @@ const aboutData = [
         href: 'https://twitter.com/whatchamacolin',
       },
     ],
-  }, 
+  },
 ];
 
 export default aboutData;

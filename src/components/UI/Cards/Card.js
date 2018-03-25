@@ -35,7 +35,7 @@ export default class Card extends Component {
     return (
       <div
         style={{ ...style, ...this.props.style }}
-        className="card-div"
+        className="box-div"
         onClick={this.props.onClick}
       >
         {this.props.children}

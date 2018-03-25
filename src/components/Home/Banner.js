@@ -7,12 +7,12 @@ const Banner = () => (
   <div id="banner-container" className="container">
     <div id="banner-1" className="banner">
       <div className="banner-copy">
-        <p>Colin <span className="plus">+</span> Johnson</p>
+        <h2>Colin <span className="plus">+</span> Johnson</h2>
       </div>
     </div>
     <div id="banner-2" className="banner">
       <div className="banner-copy">
-        <p>Full Stack <span className="plus">+</span> Engineer</p>
+        <h2>Web <span className="plus">+</span> Engineer</h2>
       </div>
     </div>
   </div>

@@ -50,7 +50,7 @@ export default class ImageCard extends Component {
       <a
         href={this.props.href}
         style={style}
-        className="card-div card-image"
+        className="box-div card-image"
         target="blank"
       >
         {this.props.children}

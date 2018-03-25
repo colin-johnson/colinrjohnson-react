@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import CardContainer from '../UI/Cards/CardContainer';
-import Card from '../UI/Cards/Card';
 import notesData from './data';
 
 export default class Notes extends Component {
@@ -18,7 +16,7 @@ export default class Notes extends Component {
 
   render() {
     return (
-      <div id="projects">
+      <div id="projects" className="page-container">
         <div className="container">
           {this.renderNotes()}
         </div>

@@ -9,15 +9,18 @@ const Header = () => {
     <nav id="nav-menu">
       <div className="container">
         <div className="row">
+          <div>
+            <div className="geo"></div>
+            <Link
+              to="/"
+              id="home-btn"
+              activeClassName="active"
+              className="nav-menu-button"
+            ><h1>Colin Johnson</h1>
+              <p>Web Engineer</p>
+            </Link>
+          </div>
           <div className="nav-menu-container">
-            <div className="nav-menu-container">
-              <Link
-                to="/"
-                id="home-btn"
-                activeClassName="active"
-                className="nav-menu-button"
-              />Colin Johnson
-            </div>
             <Link
               to="/projects"
               id="projects-btn"
@@ -25,8 +28,7 @@ const Header = () => {
               className="nav-menu-button"
             >Projects
             </Link>
-          </div>
-          <div className="nav-menu-container">
+
             <Link
               to="/about"
               id="about-btn"
@@ -34,14 +36,14 @@ const Header = () => {
               className="nav-menu-button"
             >About
             </Link>
-          </div>
-          <div className="nav-menu-container">
+
             <Link
               to="/notes"
               id="notes-btn"
               activeClassName="active"
               className="nav-menu-button"
-            />
+            >Notes
+            </Link>
           </div>
         </div>
       </div>

@@ -1,0 +1,40 @@
+.slick-slider {
+  .slick-list {
+    height: 100% !important;
+
+    .slick-slide {
+      height: 100vh;
+
+      &.about {
+        .type {
+          top: 50%;
+          position: relative;
+          transform: translateY(-50%);
+        }
+      }
+
+      &.project {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        
+        .type {
+
+        }
+      }
+    }
+  }
+
+  .slick-dots {
+    display: inline-table !important;
+    position: fixed;
+    left: 0;
+    transform: translateY(-50%);
+    top: 50%;
+    width: auto;
+
+    li {
+      display: block !important;
+    }
+  }
+}

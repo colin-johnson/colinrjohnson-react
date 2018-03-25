@@ -12,7 +12,6 @@
   .banner {
     @include horizontal-align;
     width:45%;
-    //margin-top:100px;
     background-color: $opaque;
     height:100px;
     opacity: 0;
@@ -25,8 +24,9 @@
 
     .banner-copy {
       @include flex;
-      font-size: 24px;
-
+      h2 {
+        font-family: $body-font;
+      }
       .plus {
         color:$pink;
       }

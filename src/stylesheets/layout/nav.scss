@@ -3,28 +3,56 @@
   position: absolute;
   top: 15px;
   z-index: 1000;
-  height:30px;
 
   .row {
-    @include horizontal-align;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    div {
+      height: 50px;
+    }
+
+    .geo {
+      position: relative;
+      height: 0px;
+      width: 0px;
+      top: -24px;
+      left: 0px;
+      transform: rotate(-5deg) skew(-40deg);
+      -webkit-transform: rotate(-5deg) skew(-40deg);
+      border-top: 70px solid #f8f8f8;
+      border-left: 253px solid #f8f8f8;
+      border-right: 27px solid transparent;
+      border-bottom: 23px solid transparent;
+    }
+  }
+
+  #home-btn {
+    position: relative;
+    top: -100px;
+    left: 35px;
+
+    p {
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 
   .nav-menu-container {
     flex-grow:1;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: flex-end;
 
     .nav-menu-button {
       position: relative;
-      top: -4px;
-      font-size: 13px;
-      line-height: 30px;
+      margin: 0 30px;
       transition: all .3s ease;
       @include flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
       color: $grey;
       text-decoration: none;
-      @include transition();
     }
 
     .nav-menu-button:hover {
@@ -33,7 +61,7 @@
     }
   }
 
-  .active {
-    color:$pink !important;
-  }
+  // .active {
+  //   color:$pink !important;
+  // }
 }

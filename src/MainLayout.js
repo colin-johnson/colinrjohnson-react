@@ -6,7 +6,7 @@ import Header from './components/UI/Header';
 import Background from './components/Background/AnimatedCircles';
 
 const MainLayout = ({ children }) => (
-  <div>
+  <div className="main-container">
     <Header />
     {children}
   </div>

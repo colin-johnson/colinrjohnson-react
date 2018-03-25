@@ -1,0 +1,22 @@
+.slick-slider .slick-list {
+  height: 100% !important; }
+  .slick-slider .slick-list .slick-slide {
+    height: 100vh; }
+    .slick-slider .slick-list .slick-slide.about .type {
+      top: 50%;
+      position: relative;
+      transform: translateY(-50%); }
+    .slick-slider .slick-list .slick-slide.project {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%; }
+
+.slick-slider .slick-dots {
+  display: inline-table !important;
+  position: fixed;
+  left: 0;
+  transform: translateY(-50%);
+  top: 50%;
+  width: auto; }
+  .slick-slider .slick-dots li {
+    display: block !important; }

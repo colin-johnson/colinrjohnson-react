@@ -4,18 +4,43 @@
 #main {
   background: white;
   @include full-screen();
-  color:$grey;
-  font-family: $base-font-family;
-  font-weight: $regular;
+  .main-container {
+    @include full-screen();
+  }
+
+  .page-container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    .container {
+      height: 100%;
+      position: relative;
+
+      .box {
+        // height: calc(100vh - 160px);
+        position: relative;
+        display: block;
+        // margin-top: 80px;
+        // margin-bottom: 80px;
+      }
+    }
+  }
 }
 
-#overlay {
-  position: absolute;
-  z-index: 10000;
-  width:100vw;
-  height:100vh;
-  background-color:white;
-  @include horizontal-align;
-  color:$pink;
-  font-size:36px;
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+.geo {
+    position: relative;
+    height: 0px;
+    width: 0px;
+    top: 0px;
+    left: 0px;
+    transform: rotate(-6deg) skew(-38deg);
+    -webkit-transform: rotate(-6deg) skew(-38deg);
+    border-top: 50px solid $lightgrey;
+    border-left: 200px solid $lightgrey;
+    border-right: 10px solid transparent;
+    border-bottom: 30px solid transparent;
 }
