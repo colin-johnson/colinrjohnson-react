@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Slider from 'react-slick'
+import Slider from 'react-slick';
 import aboutData from './data';
 
 export default class About extends Component {
@@ -11,10 +11,10 @@ export default class About extends Component {
   }
 
   slide(y) {
-    console.log(this.slider);
+    console.log(this.aboutSlider);
 
-    if (Math.sign(y) === 1) this.slider.slickNext();
-    if (Math.sign(y) === -1) this.slider.slickPrev();
+    if (Math.sign(y) === 1) this.aboutSlider.slickNext();
+    if (Math.sign(y) === -1) this.aboutSlider.slickPrev();
   }
 
   componentDidMount() {
@@ -32,61 +32,57 @@ export default class About extends Component {
   }
 
   renderData() {
-    return aboutData.map(about => {
-      if (about.type == "nested") {
+    return aboutData.map((about) => {
+      if (about.type === 'nested') {
         return (
           <div className="about box">
             <div className="type">
               <div>
-                <div className="geo"></div>
+                <div className="geo" />
                 <h2>{about.title}</h2>
               </div>
-              {about.content.map(a => {
-                return (
-                  <div>
-                    <h4>{a.title}</h4>
-                    <ul>
-                      {a.languages.map(language => <li>{language}</li>)}
-                    </ul>
-                    <p>{a.description}</p>
-                  </div>
-                )
-              })}
+              {about.content.map(a => (
+                <div>
+                  <h4>{a.title}</h4>
+                  <ul>
+                    {a.languages.map(language => <li>{language}</li>)}
+                  </ul>
+                  <p>{a.description}</p>
+                </div>
+                ))}
             </div>
           </div>
-        )
+        );
       }
 
-      if (about.type == "social") {
+      if (about.type === 'social') {
         return (
           <div className="about box">
             <div className="type">
               <div>
-                <div className="geo"></div>
+                <div className="geo" />
                 <h2>{about.title}</h2>
               </div>
               <ul>
-                {about.content.map(c => {
-                  return (
-                    <li>
-                      <a href={c.href}>{c.title}</a>
-                    </li>
-                  )
-                })}
+                {about.content.map(c => (
+                  <li>
+                    <a href={c.href}>{c.title}</a>
+                  </li>
+                  ))}
               </ul>
             </div>
           </div>
-        )
+        );
       }
 
       return (
         <div className="about box">
           <div className="type">
             <div>
-              <div className="geo"></div>
+              <div className="geo" />
               <h2>{about.title}</h2>
             </div>
-            {(about.type == "href")
+            {(about.type === 'href')
               ? <a href={about.content}>Click Me</a>
               : <p>{about.content}</p>}
           </div>
@@ -107,7 +103,7 @@ export default class About extends Component {
       draggable: true,
       speed: 500,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
     };
 
     return (
@@ -115,7 +111,7 @@ export default class About extends Component {
         <Slider
           {...settings}
           className="container"
-          ref={slider => this.slider = slider }
+          ref={aboutSlider => this.aboutSlider = aboutSlider}
         >
           {this.renderData()}
         </Slider>

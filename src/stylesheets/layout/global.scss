@@ -8,6 +8,10 @@
     @include full-screen();
   }
 
+  .plus {
+    color:$pink;
+  }
+  
   .page-container{
     height: 100%;
     width: 100%;

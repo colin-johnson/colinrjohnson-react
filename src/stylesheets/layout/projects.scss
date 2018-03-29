@@ -1,53 +1,11 @@
 #projects {
-
-  #card-container {
-    .modal {
-      .wrapper {
-        width: 100%;
+  .slick-slide {
+    .container {
+      .project-content {
+        top: 50%;
+    position: relative;
+    transform: translateY(-50%);
       }
-    }
-
-    .card-box:nth-child(1) .card-div:nth-child(1) .title {
-      padding-bottom: 0;
-    }
-
-    .card-box {
-      max-height: 200px;
-
-      .card-div {
-        cursor: pointer;
-        display: flex !important;
-        display: -webkit-box !important;
-        display: -moz-box !important;
-        display: -ms-flexbox !important;
-        display: -webkit-flex !important;
-        text-align: center;
-
-        .title {
-          font-size: 24px;
-          text-decoration: none;
-          z-index: 100;
-          position: relative;
-          color: #0d2636;
-        }
-      }
-
-      .overlay {
-        background: rgba(255,255,255,0.6);
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transition: background .5s ease-in;
-      }
-    }
-
-    .card-div:hover .overlay {
-      background: white;
-    }
-
-    #project-one .card-div {
     }
   }
 }
@@ -60,69 +18,26 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
   #projects {
-    #card-container {
-      .wrapper {
-        width:80%;
-      }
-    }
+
   }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
   #projects {
-    #card-container {
-      .wrapper {
-        width:90%;
-      }
-    }
+
   }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 576px) {
   #projects {
-    #card-container {
-      top: 70px;
-    }
+
   }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
   #projects {
-    #card-container {
-      .wrapper {
-        width:100%;
-
-        .project-modal {
-          .container {
-            margin-top: 75px;
-
-            .wrapper {
-
-              .modal-body {
-                .modal-flex:nth-child(4) {
-                  p {
-                    width: 90px;
-                    text-align: center;
-                  }
-                }
-              }
-
-            }
-          }
-        }
-      }
-
-      .card-box {
-        .card-div {
-          .hover {
-            bottom: 8px;
-            font-size: 8px;
-          }
-        }
-      }
-    }
   }
 }
