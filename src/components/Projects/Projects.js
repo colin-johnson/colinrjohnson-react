@@ -34,37 +34,38 @@ export default class Projects extends Component {
       const bgImage = { backgroundImage: `url("${project.image}")` };
       return (
         <div className="project box" style={bgImage}>
-          <div className="container">
-            <div className="project-content">
-              <div className="title type">
-                <div className="geo"></div>
-                <h2>{project.title}</h2>
-              </div>
+          <div className="container-fluid">
+            <div className="container">
+              <div className="project-content">
+                <div className="title type">
+                  <h2>{project.title}</h2>
+                </div>
 
-              <div className="image type" style={bgImage}></div>
+                <div className="image type" style={bgImage}></div>
 
-              <div className="summary type">
-                <h4>Summary</h4>
-                <p>{project.summary}</p>
-              </div>
+                <div className="summary type">
+                  <h4>Summary</h4>
+                  <p>{project.summary}</p>
+                </div>
 
-              <div className="responsibilities type">
-                <h4>Responsibilities</h4>
-                <ul>
-                  {project.responsibilities.map(a => <li>{a}</li>)}
-                </ul>
-              </div>
+                <div className="responsibilities type">
+                  <h4>Responsibilities</h4>
+                  <ul>
+                    {project.responsibilities.map(a => <li>{a}</li>)}
+                  </ul>
+                </div>
 
-              <div className="technologies type">
-                <h4>Technologies</h4>
-                {project.technologies.map(tech => (
-                  <div>
-                    <h5>{tech.title}</h5>
-                    <ul>
-                      {tech.types.map(type => <li>{type}</li>)}
-                    </ul>
-                  </div>
-                ))}
+                <div className="technologies type">
+                  <h4>Technologies</h4>
+                  {project.technologies.map(tech => (
+                    <div>
+                      <h5>{tech.title}</h5>
+                      <ul>
+                        {tech.types.map(type => <li>{type}</li>)}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

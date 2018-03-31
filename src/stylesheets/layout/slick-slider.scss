@@ -9,24 +9,49 @@
   .slick-list {
     height: 100% !important;
 
-    .slick-slide {
-      height: 100vh;
+    .slick-track {
+      top: -1px;
 
-      &.about {
-        .type {
-          top: 50%;
-          position: relative;
-          transform: translateY(-50%);
+      .slick-slide {
+        height: 100vh;
+        border: none;
+
+        &.project {
+          &:before {
+
+          }
         }
-      }
 
-      &.project {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
+        &.about {
+          .type {
+            top: 50%;
+            position: relative;
+            transform: translateY(-50%);
+            min-height: 200px;
+            padding-left: 30px;
 
-        .type {
+            h2 {
+              top: -64px;
+              left: 28px;
+              position: relative;
+            }
 
+            p {
+              width: 50%;
+              margin: 0 auto;
+              text-align: center;
+            }
+          }
+        }
+
+        &.project {
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+
+          .type {
+
+          }
         }
       }
     }
@@ -39,9 +64,22 @@
     transform: translateY(-50%);
     top: 50%;
     width: auto;
+    @include breakpoint(sm) {
+      left: -7px;
+    }
 
     li {
       display: block !important;
+      button:before {
+        opacity: 1;
+      }
+
+      &.slick-active {
+        button:before {
+          opacity: 1;
+          color: $pink;
+        }
+      }
     }
   }
 }

@@ -1,26 +1,25 @@
 #about {
-  .container {
-    .card-box {
-      margin-bottom: 100px;
+  .slick-list {
+    .slick-slide {
+      &.about {
+        .type {
+          top: 50%;
+          position: relative;
+          transform: translateY(-50%);
+          min-height: 200px;
+          padding-left: 30px;
 
-      .container-fluid {
-        width: 100%;
-        position: relative;
-        @include flex;
-        justify-content: flex-start;
+          h2 {
+            top: -64px;
+            left: 28px;
+            position: relative;
+          }
 
-        .title {
-          padding: 30px;
-          margin-left: -30px;
-          background: lightgrey;
-        }
-      }
-
-      ul {
-        padding: 50px;
-
-        li {
-          padding-bottom: 30px;
+          p {
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+          }
         }
       }
     }
