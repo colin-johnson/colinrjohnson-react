@@ -1,4 +1,11 @@
 .slick-slider {
+  .slick-arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
   .slick-list {
     height: 100% !important;
 
@@ -17,7 +24,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 50% 50%;
-        
+
         .type {
 
         }

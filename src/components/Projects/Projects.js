@@ -10,25 +10,23 @@ export default class Projects extends Component {
     this.slide = this.slide.bind(this);
   }
 
-  slide(y) {
-    console.log(this.projectsSlider);
-
-    if (Math.sign(y) === 1) this.projectsSlider.slickNext();
-    if (Math.sign(y) === -1) this.projectsSlider.slickPrev();
-  }
-
-  componentDidMount() {
+  slide(e) {
+    e.preventDefault()
     const neg = -25;
     const pos = 25;
-    if (document.getElementById('projects')) {
-      window.addEventListener('wheel', (e) => {
-        if (e.wheelDelta >= pos || e.wheelDelta <= neg) this.slide(e.wheelDelta);
-      });
+
+    if (e.wheelDelta >= pos || e.wheelDelta <= neg) {
+      if (Math.sign(e.wheelDelta) === 1) document.getElementById('projects').getElementsByClassName('slick-next')[0].click();
+      if (Math.sign(e.wheelDelta) === -1) document.getElementById('projects').getElementsByClassName('slick-prev')[0].click();
     }
   }
 
+  componentDidMount() {
+    window.addEventListener('wheel', (e) => this.slide(e));
+  }
+
   componentWillUnmount() {
-    window.removeEventListener('wheel', () => console.log('removed'));
+    window.removeEventListener('wheel', (e) => this.slide(e));
   }
 
   renderProjects() {

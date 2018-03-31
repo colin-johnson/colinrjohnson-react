@@ -10,25 +10,23 @@ export default class About extends Component {
     this.slide = this.slide.bind(this);
   }
 
-  slide(y) {
-    console.log(this.aboutSlider);
-
-    if (Math.sign(y) === 1) this.aboutSlider.slickNext();
-    if (Math.sign(y) === -1) this.aboutSlider.slickPrev();
-  }
-
-  componentDidMount() {
+  slide(e) {
+    e.preventDefault()
     const neg = -25;
     const pos = 25;
-    if (document.getElementById('about')) {
-      window.addEventListener('wheel', (e) => {
-        if (e.wheelDelta >= pos || e.wheelDelta <= neg) this.slide(e.wheelDelta);
-      });
+    
+    if (e.wheelDelta >= pos || e.wheelDelta <= neg) {
+      if (Math.sign(e.wheelDelta) === 1) document.getElementById('about').getElementsByClassName('slick-next')[0].click();
+      if (Math.sign(e.wheelDelta) === -1) document.getElementById('about').getElementsByClassName('slick-prev')[0].click();
     }
   }
 
+  componentDidMount() {
+    window.addEventListener('wheel', (e) => this.slide(e));
+  }
+
   componentWillUnmount() {
-    window.removeEventListener('wheel', () => console.log('removed'));
+    window.removeEventListener('wheel', (e) => this.slide(e));
   }
 
   renderData() {
