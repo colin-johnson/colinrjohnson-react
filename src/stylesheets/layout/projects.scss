@@ -14,13 +14,16 @@
           position: absolute;
           height: 25vh;
           width: calc(100% + 22px);
-          top: -140px;
+          top: -155px;
           left: -11px;
           background: white;
-          transform: rotate(-10deg) skew(-10deg);
-          -webkit-transform: rotate(-10deg) skew(-10deg);
+          transform: rotate(-7deg) skew(-10deg);
+          -webkit-transform: rotate(-7deg) skew(-10deg);
           border-top: 269px solid white;
           border-left: 100px solid white;
+          @include breakpoint(md) {
+            top: -132px;
+          }
         }
 
         &:after {
@@ -29,10 +32,10 @@
           position: absolute;
           height: 25vh;
           width: calc(100% + 22px);
-          bottom: -240px;
+          bottom: -250px;
           background: white;
-          transform: rotate(-10deg) skew(-10deg);
-          -webkit-transform: rotate(-10deg) skew(-10deg);
+          transform: rotate(-7deg) skew(-10deg);
+          -webkit-transform: rotate(-7deg) skew(-10deg);
           border-top: 269px solid white;
           border-left: 100px solid white;
         }
@@ -42,15 +45,87 @@
           width: 100%;
           height: 100%;
           position: relative;
-          background: rgba(255, 255, 255, 0.65);
+          background: rgba(255, 255, 255, 0.5);
 
           .container {
             padding-top: 100px;
-            padding-bottom: 100px;
+            @include breakpoint(md) {
+              padding-top: 90px;
+            }
+
+            .title {
+              margin-bottom: 25px;
+              @include breakpoint(md) {
+                margin-bottom: 0;
+              }
+
+              h2 {
+                font-size: 34px;
+                color: $pink;
+                @include breakpoint(md) {
+                  font-size: 30px;
+                }
+              }
+            }
 
             .project-content {
               position: relative;
-              height: 100%;
+              color: white !important;
+
+              .type {
+                padding: 30px;
+                @include breakpoint(md) {
+                  &:first-child {
+                    padding-top: 40px;
+                  }
+                  padding: 15px;
+                }
+
+                h4 {
+                  padding-bottom: 14px;
+                }
+
+                ul {
+                  padding-left: 20px;
+                }
+
+                &.summary {
+                  width: 100%;
+                }
+
+                &.responsibilities {
+                  width: 30%;
+                  float: left;
+                  @include breakpoint(md) {
+                    width: 100%;
+                  }
+                }
+
+                &.technologies {
+                  width: 70%;
+                  float: left;
+                  @include breakpoint(md) {
+                    width: 100%;
+                  }
+
+                  .content {
+                    @include flexbox;
+
+                    div {
+                      width: 100%;
+                      padding-left: 20px;
+
+                      ul {
+                        @include flexbox;
+                        flex-direction: column;
+                        li {
+                          padding-right: 20px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -71,21 +146,21 @@
   }
 }
 
-/* Small Devices, Tablets */
+/* mdall Devices, Tablets */
 @media only screen and (max-width : 768px) {
   #projects {
 
   }
 }
 
-/* Extra Small Devices, Phones */
+/* Extra mdall Devices, Phones */
 @media only screen and (max-width : 576px) {
   #projects {
 
   }
 }
 
-/* Extra Small Devices, Phones */
+/* Extra mdall Devices, Phones */
 @media only screen and (max-width : 480px) {
   #projects {
   }

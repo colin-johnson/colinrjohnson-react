@@ -23,16 +23,19 @@
       transform: rotate(-5deg) skew(-40deg);
       -webkit-transform: rotate(-5deg) skew(-40deg);
       border-top: 70px solid #f8f8f8;
-      border-left: 253px solid #f8f8f8;
+      border-left: 239px solid #f8f8f8;
       border-right: 27px solid transparent;
-      border-bottom: 23px solid transparent;
+      border-bottom: 10px solid transparent;
     }
   }
 
   #home-btn {
     position: relative;
-    top: -100px;
+    top: -90px;
     left: 35px;
+    h1 {
+      font-size: 28px;
+    }
 
     p {
       font-size: 14px;

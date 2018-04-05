@@ -9,19 +9,19 @@ const projectData = [
     technologies: [
       {
         title: 'Front End',
-        types: ['React', 'Redux', 'Javascript/ES6', 'Webpack']
+        types: ['React', 'Redux', 'Javascript/ES6', 'Webpack'],
       },
       {
         title: 'Back End',
-        types: ['Node', 'Express', 'Passport.js', 'Mongoose', 'Mongo DB']
+        types: ['Node', 'Express', 'Passport.js', 'Mongoose', 'Mongo DB'],
       },
       {
         title: 'API Integrations',
-        types: ['Instagram API', 'Stripe Payments API']
-      }
+        types: ['Instagram API', 'Stripe Payments API'],
+      },
     ],
-    image: '../images/projects/buzz1.jpg',
-    href: 'https://github.com/colin-johnson/instagram-bot'
+    image: '../images/projects/titon-bg.png',
+    href: 'https://github.com/colin-johnson/instagram-bot',
   },
   {
     title: 'JOEY Restaurants',
@@ -30,19 +30,19 @@ const projectData = [
     technologies: [
       {
         title: 'Front End',
-        types: ['React', 'Javascript/ES6', 'HTML5', 'CSS3', 'Twig', 'Webpack']
+        types: ['React', 'Javascript/ES6', 'HTML5', 'CSS3', 'Twig', 'Webpack'],
       },
       {
         title: 'Back End',
-        types: ['Craft CMS', 'PHP']
+        types: ['Craft CMS', 'PHP'],
       },
       {
         title: 'API Integrations',
-        types: ['Workable API', 'QSR API', 'MailChimp API']
-      }
+        types: ['Workable API', 'QSR API', 'MailChimp API'],
+      },
     ],
-    image: '../images/projects/buzz1.jpg',
-    href: 'https://joeyrestaurants.com'
+    image: '../images/projects/titon-bg.png',
+    href: 'https://joeyrestaurants.com',
   },
   {
     title: 'Titon Toolkit',
@@ -53,9 +53,9 @@ const projectData = [
     responsibilities: ['Front End Development'],
     technologies: [{
       title: 'Front End',
-      types: ['React', 'Javascript/ES6', 'SASS', 'Flowtype', 'Jest']
+      types: ['React', 'Javascript/ES6', 'SASS', 'Flowtype', 'Jest'],
     }],
-    image: '../images/projects/titon.png',
+    image: '../images/projects/titon-bg.png',
     href: 'https://github.com/titon/toolkit',
   },
   {
@@ -65,14 +65,14 @@ const projectData = [
     technologies: [
       {
         title: 'Front End',
-        types: ['React', 'Javascript/ES6', 'HTML5', 'CSS3', 'Webpack']
+        types: ['React', 'Javascript/ES6', 'HTML5', 'CSS3', 'Webpack'],
       },
       {
         title: 'Back End',
-        types: ['Node', 'Express', 'MongoDB', 'Wordpress']
-      }
+        types: ['Node', 'Express', 'MongoDB', 'Wordpress'],
+      },
     ],
-    image: '../images/projects/sbt.png',
+    image: '../images/projects/titon-bg.png',
     href: 'http://lynberg.com/',
   },
   {
@@ -86,7 +86,7 @@ const projectData = [
       title: 'Front End',
       types: ['React', 'Javascript/ES6', 'SASS', 'Webpack', 'Node'],
     }],
-    image: '../images/projects/tsm.png',
+    image: '../images/projects/titon-bg.png',
     href: 'https://github.com/twelvestepmeetings/twelvestepmeetings.git',
   },
   {
@@ -101,7 +101,7 @@ const projectData = [
       title: 'Front End',
       types: ['HTML5', 'CSS3', 'Javascript', 'Jquery'],
     }],
-    image: '../images/projects/palisades.png',
+    image: '../images/projects/titon-bg.png',
     href: 'http://palisadesmedia.com/',
   },
   {
@@ -119,9 +119,9 @@ const projectData = [
       {
         title: 'Back End',
         types: ['PHP', 'Wordpress'],
-      }
+      },
     ],
-    image: '../images/projects/thfh.png',
+    image: '../images/projects/titon-bg.png',
     href: 'http://tohimfromher.com/',
   },
   {
@@ -139,11 +139,11 @@ const projectData = [
       {
         title: 'Back End',
         types: ['PHP'],
-      }
+      },
     ],
-    image: '../images/projects/sbt.png',
+    image: '../images/projects/titon-bg.png',
     href: 'http://southbaytrainer.com/',
   },
-]
+];
 
 export default projectData;

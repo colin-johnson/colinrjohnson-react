@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Slider from 'react-slick'
+import Slider from 'react-slick';
 import projectData from './data';
 
 export default class Projects extends Component {
@@ -11,7 +11,7 @@ export default class Projects extends Component {
   }
 
   slide(e) {
-    e.preventDefault()
+    e.preventDefault();
     const neg = -25;
     const pos = 25;
 
@@ -22,29 +22,26 @@ export default class Projects extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('wheel', (e) => this.slide(e));
+    window.addEventListener('wheel', e => this.slide(e));
   }
 
   componentWillUnmount() {
-    window.removeEventListener('wheel', (e) => this.slide(e));
+    window.removeEventListener('wheel', e => this.slide(e));
   }
 
   renderProjects() {
-    return projectData.map(project => {
+    return projectData.map((project) => {
       const bgImage = { backgroundImage: `url("${project.image}")` };
       return (
         <div className="project box" style={bgImage}>
           <div className="container-fluid">
             <div className="container">
+              <div className="title type">
+                <h2>{project.title}</h2>
+              </div>
+
               <div className="project-content">
-                <div className="title type">
-                  <h2>{project.title}</h2>
-                </div>
-
-                <div className="image type" style={bgImage}></div>
-
                 <div className="summary type">
-                  <h4>Summary</h4>
                   <p>{project.summary}</p>
                 </div>
 
@@ -57,14 +54,16 @@ export default class Projects extends Component {
 
                 <div className="technologies type">
                   <h4>Technologies</h4>
-                  {project.technologies.map(tech => (
-                    <div>
-                      <h5>{tech.title}</h5>
-                      <ul>
-                        {tech.types.map(type => <li>{type}</li>)}
-                      </ul>
-                    </div>
-                  ))}
+                  <div className="content">
+                    {project.technologies.map(tech => (
+                      <div>
+                        <h5>{tech.title}</h5>
+                        <ul>
+                          {tech.types.map(type => <li>{type}</li>)}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -86,14 +85,14 @@ export default class Projects extends Component {
       draggable: true,
       speed: 500,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
     };
 
     return (
       <div id="projects" className="page-container">
         <Slider
           {...settings}
-          ref={projectsSlider => this.projectsSlider = projectsSlider }
+          ref={projectsSlider => this.projectsSlider = projectsSlider}
         >
           {this.renderProjects()}
         </Slider>
