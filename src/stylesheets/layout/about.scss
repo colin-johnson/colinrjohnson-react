@@ -1,4 +1,7 @@
 #about {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+  
   .slick-list {
     .slick-slide {
       &.about {

@@ -1,17 +1,20 @@
-#about .slick-list .slick-slide.about .type {
-  top: 50%;
-  position: relative;
-  transform: translateY(-50%);
-  min-height: 200px;
-  padding-left: 30px; }
-  #about .slick-list .slick-slide.about .type h2 {
-    top: -64px;
-    left: 28px;
-    position: relative; }
-  #about .slick-list .slick-slide.about .type p {
-    width: 50%;
-    margin: 0 auto;
-    text-align: center; }
+#about {
+  opacity: 0;
+  transition: opacity 0.5s ease-in; }
+  #about .slick-list .slick-slide.about .type {
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    min-height: 200px;
+    padding-left: 30px; }
+    #about .slick-list .slick-slide.about .type h2 {
+      top: -64px;
+      left: 28px;
+      position: relative; }
+    #about .slick-list .slick-slide.about .type p {
+      width: 50%;
+      margin: 0 auto;
+      text-align: center; }
 
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */

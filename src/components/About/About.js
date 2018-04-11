@@ -11,10 +11,10 @@ export default class About extends Component {
   }
 
   slide(e) {
-    e.preventDefault()
+    e.preventDefault();
     const neg = -25;
     const pos = 25;
-    
+
     if (e.wheelDelta >= pos || e.wheelDelta <= neg) {
       if (Math.sign(e.wheelDelta) === 1) document.getElementById('about').getElementsByClassName('slick-next')[0].click();
       if (Math.sign(e.wheelDelta) === -1) document.getElementById('about').getElementsByClassName('slick-prev')[0].click();
@@ -22,11 +22,8 @@ export default class About extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('wheel', (e) => this.slide(e));
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('wheel', (e) => this.slide(e));
+    window.addEventListener('wheel', e => this.slide(e));
+    document.getElementById('about').style.opacity = '1';
   }
 
   renderData() {

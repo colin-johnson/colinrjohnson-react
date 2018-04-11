@@ -23,10 +23,7 @@ export default class Projects extends Component {
 
   componentDidMount() {
     window.addEventListener('wheel', e => this.slide(e));
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('wheel', e => this.slide(e));
+    document.getElementById('projects').style.opacity = '1';
   }
 
   renderProjects() {
@@ -66,6 +63,9 @@ export default class Projects extends Component {
                   </div>
                 </div>
               </div>
+              <div className="link type">
+                <a href={project.href} target="_blank">View</a>
+              </div>
             </div>
           </div>
         </div>
@@ -94,6 +94,21 @@ export default class Projects extends Component {
           {...settings}
           ref={projectsSlider => this.projectsSlider = projectsSlider}
         >
+          <div className="project box">
+            <div className="container-fluid">
+              <div className="container">
+
+                <div className="project-content" id="intro-slide">
+                  <div className="summary type">
+                    <h2 className="intro">Some current highlighted projects of mine<span className="pink">.</span></h2>
+                    <p>Scroll to view</p>
+                  </div>
+                </div>
+
+                <div className="scroll" />
+              </div>
+            </div>
+          </div>
           {this.renderProjects()}
         </Slider>
       </div>

@@ -3,6 +3,7 @@
   position: absolute;
   top: 15px;
   z-index: 1000;
+  opacity: 0;
 
   .row {
     display: flex;
@@ -11,7 +12,7 @@
     align-items: center;
 
     div {
-      height: 50px;
+      height: 45px;
     }
 
     .geo {
@@ -65,6 +66,10 @@
       @include breakpoint(sm) {
         font-size: 12px;
       }
+
+      &.active {
+        color: $pink !important;
+      }
     }
 
     .nav-menu-button:hover {
@@ -73,7 +78,14 @@
     }
   }
 
-  // .active {
-  //   color:$pink !important;
-  // }
+}
+
+// #nav-menu {
+//   animation: fadein 3s 3.5s 1 normal forwards;
+// }
+
+@keyframes fadein {
+  0% {  opacity: 0;  }
+  50% {  opacity: 1;  }
+  100% {  opacity: 1;  }
 }
