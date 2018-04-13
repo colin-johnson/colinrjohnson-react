@@ -5,7 +5,7 @@ const aboutData = [
   {
     type: 'single',
     title: 'About',
-    content: 'I\'m a Full Stack Engineer based Portland, OR.',
+    content: ['A passionate Full Stack Web Engineer based in Portland, OR.', 'React & Node.js enthusiast, vanilla Javascript lover, and intuitive, concise, and performant code writer.', 'Agile and adaptable in nature, with the ability to conceptualize, scope, and build from idea to launch.'],
   },
   {
     type: 'nested',
@@ -13,30 +13,27 @@ const aboutData = [
     content: [
       {
         title: 'Front End',
-        languages: ['Javascript/ES6', 'HTML5', 'CSS3', 'Git', 'React', 'React Native', 'SASS', 'Bootstrap', 'Jquery'],
-        description: ''
+        languages: ['React', 'Javascript/ES6', 'HTML5', 'CSS3', 'SASS'],
       },
       {
         title: 'Back End',
-        languages: ['PHP', 'Node', 'Express'],
-        description: ''
+        languages: ['Node.js', 'Express.js', 'PHP'],
       },
       {
         title: 'Tools',
-        languages: ['Git','Redux', 'React-Router', 'ReactCSS', 'Aesthetic', 'NPM', 'Webpack', 'Browserify', 'ESLint', 'GSAP', 'Babel', '..and more'],
-        description: ''
-      }
+        languages: ['Git', 'Redux', 'React-Router', 'ReactCSS', 'Aesthetic', 'NPM', 'Webpack', 'Browserify', 'ESLint', 'GSAP', 'Babel', '..and more'],
+      },
     ],
   },
   {
     type: 'single',
     title: 'Selected Clients',
-    content: 'Nike',
+    content: ['Nike'],
   },
   {
     type: 'single',
     title: 'Timeline',
-    content: 'start',
+    content: ['start'],
   },
   {
     type: 'href',
@@ -44,13 +41,8 @@ const aboutData = [
     content: '',
   },
   {
-    type: 'single',
-    title: 'Contact',
-    content: 'contact@colinrjohnson.com',
-  },
-  {
     type: 'social',
-    title: 'Social',
+    title: 'Connect',
     content: [
       {
         title: 'LinkedIn',
@@ -60,11 +52,12 @@ const aboutData = [
         title: 'GitHub',
         href: 'https://github.com/colin-johnson',
       },
-      {
-        title: 'Twitter',
-        href: 'https://twitter.com/whatchamacolin',
-      },
     ],
+  },
+  {
+    type: 'single',
+    title: 'Contact',
+    content: ['contact@colinrjohnson.com'],
   },
 ];
 

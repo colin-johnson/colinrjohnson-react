@@ -5,20 +5,14 @@
     top: 50%;
     position: relative;
     transform: translateY(-50%);
-    min-height: 200px;
     padding-left: 30px; }
     #about .slick-list .slick-slide.about .type h2 {
-      top: -64px;
-      left: 28px;
       position: relative; }
-    #about .slick-list .slick-slide.about .type p {
-      width: 50%;
-      margin: 0 auto;
-      text-align: center; }
-
-/* Large Devices, Wide Screens */
-/* Medium Devices, Desktops */
-/* Small Devices, Tablets */
-/* Extra Small Devices, Phones */
-/* Extra Small Devices, Phones */
-/* Extra Small Devices, Phones */
+    #about .slick-list .slick-slide.about .type .content div {
+      padding: 15px 0; }
+      #about .slick-list .slick-slide.about .type .content div ul {
+        padding-left: 30px; }
+        #about .slick-list .slick-slide.about .type .content div ul li {
+          padding-right: 30px; }
+          #about .slick-list .slick-slide.about .type .content div ul li:last-child {
+            padding-right: 0; }

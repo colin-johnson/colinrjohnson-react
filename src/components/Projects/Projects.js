@@ -101,7 +101,7 @@ export default class Projects extends Component {
                 <div className="project-content" id="intro-slide">
                   <div className="summary type">
                     <h2 className="intro">Some current highlighted projects of mine<span className="pink">.</span></h2>
-                    <p>Scroll to view</p>
+                    <p className="disclaimer">Scroll to view</p>
                   </div>
                 </div>
 
