@@ -20,7 +20,7 @@ const projectData = [
         types: ['Instagram API', 'Stripe Payments API'],
       },
     ],
-    image: '../images/projects/titon-bg.png',
+    image: '../images/projects/asd.png',
     href: 'https://github.com/colin-johnson/instagram-bot',
   },
   {
