@@ -1,7 +1,7 @@
 #about {
   opacity: 0;
   transition: opacity 0.5s ease-in;
-  
+
   .slick-list {
     .slick-slide {
       &.about {
@@ -9,63 +9,48 @@
           top: 50%;
           position: relative;
           transform: translateY(-50%);
-          min-height: 200px;
           padding-left: 30px;
+          @include breakpoint(md) {
+            padding-left: 15px;
+          }
 
           h2 {
-            top: -64px;
-            left: 28px;
             position: relative;
+            padding-bottom: 30px;
           }
 
           p {
-            width: 50%;
-            margin: 0 auto;
-            text-align: center;
+            padding-bottom: 15px;
+          }
+
+          .content {
+            div {
+              padding: 5px 0;
+
+              h4 {
+                padding-bottom: 8px;
+              }
+
+              ul {
+                padding-left: 30px;
+                @include breakpoint(md) {
+                  @include flexbox;
+                  justify-content: flex-start;
+                  flex-wrap: wrap;
+                }
+
+                li {
+                  padding-right: 30px;
+                  display: inline;
+                  &:last-child {
+                    padding-right: 0;
+                  }
+                }
+              }
+            }
           }
         }
       }
     }
-  }
-}
-/* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
-  #about {
-
-  }
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 991px) {
-  #about {
-
-  }
-}
-
-/* Small Devices, Tablets */
-@media only screen and (max-width : 767px) {
-  #about {
-
-  }
-}
-
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 576px) {
-  #about {
-
-  }
-}
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {
-  #about {
-
-  }
-}
-
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {
-  #about {
-
   }
 }

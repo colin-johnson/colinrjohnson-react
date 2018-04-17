@@ -23,25 +23,25 @@
         }
 
         &.about {
-          .type {
-            top: 50%;
-            position: relative;
-            transform: translateY(-50%);
-            min-height: 200px;
-            padding-left: 30px;
-
-            h2 {
-              top: -64px;
-              left: 28px;
-              position: relative;
-            }
-
-            p {
-              width: 50%;
-              margin: 0 auto;
-              text-align: center;
-            }
-          }
+          // .type {
+          //   top: 50%;
+          //   position: relative;
+          //   transform: translateY(-50%);
+          //   min-height: 200px;
+          //   padding-left: 30px;
+          //
+          //   h2 {
+          //     top: -64px;
+          //     left: 28px;
+          //     position: relative;
+          //   }
+          //
+          //   p {
+          //     width: 50%;
+          //     margin: 0 auto;
+          //     text-align: center;
+          //   }
+          // }
         }
 
         &.project {

@@ -32,19 +32,20 @@ export default class About extends Component {
         return (
           <div className="about box">
             <div className="type">
-              <div>
-                <div className="geo" />
-                <h2>{about.title}</h2>
+
+              <h2>{about.title}</h2>
+              <div className="content">
+                {about.content.map(a => (
+                  <div>
+                    <h4>{a.title}</h4>
+                    <ul>
+                      {a.languages.map(language => <li>{language}</li>)}
+                    </ul>
+                    <p>{a.description}</p>
+                  </div>
+                  ))}
+                <p className="disclaimer">A highlighted, but not exhaustive list</p>
               </div>
-              {about.content.map(a => (
-                <div>
-                  <h4>{a.title}</h4>
-                  <ul>
-                    {a.languages.map(language => <li>{language}</li>)}
-                  </ul>
-                  <p>{a.description}</p>
-                </div>
-                ))}
             </div>
           </div>
         );
@@ -54,10 +55,9 @@ export default class About extends Component {
         return (
           <div className="about box">
             <div className="type">
-              <div>
-                <div className="geo" />
-                <h2>{about.title}</h2>
-              </div>
+
+              <h2>{about.title}</h2>
+
               <ul>
                 {about.content.map(c => (
                   <li>
@@ -70,16 +70,12 @@ export default class About extends Component {
         );
       }
 
+      const content = Array.from(about.content);
       return (
         <div className="about box">
           <div className="type">
-            <div>
-              <div className="geo" />
-              <h2>{about.title}</h2>
-            </div>
-            {(about.type === 'href')
-              ? <a href={about.content}>Click Me</a>
-              : <p>{about.content}</p>}
+            <h2>{about.title}</h2>
+            {content.map(b => <p>{b}</p>)}
           </div>
         </div>
       );
