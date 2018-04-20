@@ -61,7 +61,7 @@ export default class About extends Component {
               <ul>
                 {about.content.map(c => (
                   <li>
-                    <a href={c.href}>{c.title}</a>
+                    <a href={c.href} target="_blank">{c.title}</a>
                   </li>
                   ))}
               </ul>

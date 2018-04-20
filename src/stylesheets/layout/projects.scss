@@ -118,7 +118,7 @@
                 }
 
                 ul {
-                  padding-left: 20px;
+                  // padding-left: 20px;
                   @include breakpoint(md) {
                     padding-left: 0;
                   }
@@ -165,15 +165,22 @@
                       }
 
                       ul {
-                        @include flexbox;
-                        flex-direction: column;
-                        @include breakpoint(md) {
-                          flex-direction: row;
-                          flex-wrap: wrap;
-                        }
+                        // @include flexbox;
+                        // flex-direction: column;
+                        // @include breakpoint(md) {
+                        //   flex-direction: row;
+                        //   flex-wrap: wrap;
+                        // }
+                        display: inline-block;
 
                         li {
-                          padding-right: 20px;
+                          margin: 5px;
+                          color: grey;
+                          background: white;
+                          border-radius: 99px;
+                          padding: 0 12px;
+                          font-size: 12px;
+                          display: inline-block;
                         }
                       }
                     }

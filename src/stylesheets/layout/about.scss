@@ -23,6 +23,18 @@
             padding-bottom: 15px;
           }
 
+          ul {
+            @include flexbox;
+
+            li {
+              width: 50%;
+
+              a {
+                outline: 0;
+              }
+            }
+          }
+
           .content {
             div {
               padding: 5px 0;
