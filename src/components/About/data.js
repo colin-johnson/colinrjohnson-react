@@ -28,7 +28,7 @@ const aboutData = [
   {
     type: 'single',
     title: 'Selected Clients',
-    content: ['Nike'],
+    content: ['Nike', 'Red Bull', 'Joey Restaurants', 'Toyota', 'Amazon', 'Art Institutes', 'Honda'],
   },
   {
     type: 'single',
@@ -38,7 +38,8 @@ const aboutData = [
   {
     type: 'href',
     title: 'Resumé',
-    content: '',
+    content: 'Click Me',
+    href: '/ColinJohnson-Resume.pdf',
   },
   {
     type: 'social',
@@ -55,9 +56,10 @@ const aboutData = [
     ],
   },
   {
-    type: 'single',
+    type: 'href',
     title: 'Contact',
-    content: ['contact@colinrjohnson.com'],
+    content: 'contact@colinrjohnson.com',
+    href: 'mailto:contact@colinrjohnson.com'
   },
 ];
 

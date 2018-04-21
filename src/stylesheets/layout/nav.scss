@@ -34,8 +34,16 @@
     position: relative;
     top: -90px;
     left: 35px;
+    &:visited {
+      color: $grey;
+    }
     h1 {
       font-size: 28px;
+      color: $grey;
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: $pink;
+      }
     }
 
     p {

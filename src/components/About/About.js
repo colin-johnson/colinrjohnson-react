@@ -14,10 +14,11 @@ export default class About extends Component {
     e.preventDefault();
     const neg = -25;
     const pos = 25;
+    const about = document.getElementById('about');
 
     if (e.wheelDelta >= pos || e.wheelDelta <= neg) {
-      if (Math.sign(e.wheelDelta) === 1) document.getElementById('about').getElementsByClassName('slick-next')[0].click();
-      if (Math.sign(e.wheelDelta) === -1) document.getElementById('about').getElementsByClassName('slick-prev')[0].click();
+      if (Math.sign(e.wheelDelta) === 1) about.getElementsByClassName('slick-next')[0].click();
+      if (Math.sign(e.wheelDelta) === -1) about.getElementsByClassName('slick-prev')[0].click();
     }
   }
 
@@ -54,7 +55,7 @@ export default class About extends Component {
       if (about.type === 'social') {
         return (
           <div className="about box">
-            <div className="type">
+            <div className="type social">
 
               <h2>{about.title}</h2>
 
@@ -64,6 +65,23 @@ export default class About extends Component {
                     <a href={c.href} target="_blank">{c.title}</a>
                   </li>
                   ))}
+              </ul>
+            </div>
+          </div>
+        );
+      }
+
+      if (about.type === 'href') {
+        return (
+          <div className="about box">
+            <div className="type">
+
+              <h2>{about.title}</h2>
+
+              <ul>
+                <li>
+                  <a href={about.href} target="_blank">{about.content}</a>
+                </li>
               </ul>
             </div>
           </div>

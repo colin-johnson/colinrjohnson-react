@@ -29,6 +29,11 @@ p, a, div {
 
 a {
   color: $grey;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover, a:visited {
+  color: $pink;
 }
 
 a:link,
