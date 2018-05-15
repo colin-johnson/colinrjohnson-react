@@ -14,10 +14,13 @@ export default class Projects extends Component {
     e.preventDefault();
     const neg = -25;
     const pos = 25;
+    const projects = document.getElementById('projects');
 
-    if (e.wheelDelta >= pos || e.wheelDelta <= neg) {
-      if (Math.sign(e.wheelDelta) === 1) document.getElementById('projects').getElementsByClassName('slick-next')[0].click();
-      if (Math.sign(e.wheelDelta) === -1) document.getElementById('projects').getElementsByClassName('slick-prev')[0].click();
+    if (projects !== null) {
+      if (e.wheelDelta >= pos || e.wheelDelta <= neg) {
+        if (Math.sign(e.wheelDelta) === 1) document.getElementById('projects').getElementsByClassName('slick-next')[0].click();
+        if (Math.sign(e.wheelDelta) === -1) document.getElementById('projects').getElementsByClassName('slick-prev')[0].click();
+      }
     }
   }
 

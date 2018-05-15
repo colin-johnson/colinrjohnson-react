@@ -27,7 +27,7 @@
             @include flexbox;
 
             li {
-              width: 50%;
+              // width: 50%;
 
               a {
                 outline: 0;
@@ -35,13 +35,28 @@
             }
           }
 
+          &.client {
+            ul {
+              flex-wrap: wrap;
+              @include breakpoint(sm) {
+                flex-direction: column;
+              }
+              li {
+                padding-left: 30px;
+                padding-bottom: 10px;
+              }
+            }
+          }
+
           &.social {
             ul {
+
               li {
+                width: 50%;
                 a {
                   padding-left: 25px;
                 }
-                
+
                 a:before {
                   display: block;
                   content: '';

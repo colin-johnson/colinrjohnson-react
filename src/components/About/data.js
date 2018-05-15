@@ -5,7 +5,7 @@ const aboutData = [
   {
     type: 'single',
     title: 'About',
-    content: ['A passionate Full Stack Web Engineer based in Portland, OR.', 'React & Node.js enthusiast, vanilla Javascript lover, and intuitive, concise, and performant code writer.', 'Agile and adaptable in nature, with the ability to conceptualize, scope, and build from idea to launch.'],
+    content: ['A passionate Full Stack Web Engineer based in Portland, OR.', 'React & Node.js enthusiast, vanilla Javascript lover, and intuitive, concise, and performant code writer.', 'Agile and adaptable in nature, with the ability to conceptualize, scope, and lead a build from idea to launch.'],
   },
   {
     type: 'nested',
@@ -13,28 +13,32 @@ const aboutData = [
     content: [
       {
         title: 'Front End',
-        languages: ['React', 'Javascript/ES6', 'HTML5', 'CSS3', 'SASS'],
+        languages: ['Javascript/ES6', 'React', 'Redux', 'HTML5', 'CSS3', 'SASS', 'Vue.js', 'JQuery (if necessary)'],
       },
       {
         title: 'Back End',
-        languages: ['Node.js', 'Express.js', 'PHP'],
+        languages: ['Node.js', 'Express.js', 'MongoDB', 'PHP', 'MySQL'],
       },
       {
         title: 'Tools',
-        languages: ['Git', 'Redux', 'React-Router', 'ReactCSS', 'Aesthetic', 'NPM', 'Webpack', 'Browserify', 'ESLint', 'GSAP', 'Babel', '..and more'],
+        languages: ['Git', 'Webpack', 'Jest w/ Enzyme', 'Babel', 'NPM'],
+      },
+      {
+        title: 'Other',
+        languages: ['RESTful API Design', 'API Integrations', 'Craft CMS', 'Contentful CMS'],
       },
     ],
   },
   {
-    type: 'single',
+    type: 'client',
     title: 'Selected Clients',
-    content: ['Nike', 'Red Bull', 'Joey Restaurants', 'Toyota', 'Amazon', 'Art Institutes', 'Honda'],
+    content: ['Nike', 'Red Bull', 'Amazon', 'Joey Restaurants', 'Lynberg & Watkins', 'South Bay Trainer', 'Led Lenser', 'Art Institutes', 'Honda', 'Toyota'],
   },
-  {
-    type: 'single',
-    title: 'Timeline',
-    content: ['start'],
-  },
+  // {
+  //   type: 'single',
+  //   title: 'Timeline',
+  //   content: ['start'],
+  // },
   {
     type: 'href',
     title: 'Resumé',
@@ -59,7 +63,7 @@ const aboutData = [
     type: 'href',
     title: 'Contact',
     content: 'contact@colinrjohnson.com',
-    href: 'mailto:contact@colinrjohnson.com'
+    href: 'mailto:contact@colinrjohnson.com',
   },
 ];
 

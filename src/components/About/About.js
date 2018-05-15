@@ -7,6 +7,7 @@ export default class About extends Component {
     super(props);
 
     this.renderData = this.renderData.bind(this);
+    this.beforeSlideChange = this.beforeSlideChange.bind(this);
     this.slide = this.slide.bind(this);
   }
 
@@ -16,10 +17,17 @@ export default class About extends Component {
     const pos = 25;
     const about = document.getElementById('about');
 
-    if (e.wheelDelta >= pos || e.wheelDelta <= neg) {
-      if (Math.sign(e.wheelDelta) === 1) about.getElementsByClassName('slick-next')[0].click();
-      if (Math.sign(e.wheelDelta) === -1) about.getElementsByClassName('slick-prev')[0].click();
+    if (about !== null) {
+      if (e.wheelDelta >= pos || e.wheelDelta <= neg) {
+        if (Math.sign(e.wheelDelta) === 1) about.getElementsByClassName('slick-next')[0].click();
+        if (Math.sign(e.wheelDelta) === -1) about.getElementsByClassName('slick-prev')[0].click();
+      }
     }
+  }
+
+  beforeSlideChange(current, next) {
+    const nextSlide = document.getElementById(`slide-${next}`);
+    const currentSlide = document.getElementById(`slide-${next - 1}`);
   }
 
   componentDidMount() {
@@ -28,11 +36,11 @@ export default class About extends Component {
   }
 
   renderData() {
-    return aboutData.map((about) => {
+    return aboutData.map((about, index) => {
       if (about.type === 'nested') {
         return (
-          <div className="about box">
-            <div className="type">
+          <div className="about box slide" id={`slide-${index}`}>
+            <div className={`type ${about.type}`}>
 
               <h2>{about.title}</h2>
               <div className="content">
@@ -54,8 +62,8 @@ export default class About extends Component {
 
       if (about.type === 'social') {
         return (
-          <div className="about box">
-            <div className="type social">
+          <div className="about box slide" id={`slide-${index}`}>
+            <div className={`type social ${about.type}`}>
 
               <h2>{about.title}</h2>
 
@@ -71,10 +79,25 @@ export default class About extends Component {
         );
       }
 
+      if (about.type === 'client') {
+        return (
+          <div className="about box slide" id={`slide-${index}`}>
+            <div className={`type ${about.type}`}>
+
+              <h2>{about.title}</h2>
+
+              <ul>
+                {about.content.map(c => <li>{c}</li>)}
+              </ul>
+            </div>
+          </div>
+        );
+      }
+
       if (about.type === 'href') {
         return (
-          <div className="about box">
-            <div className="type">
+          <div className="about box slide" id={`slide-${index}`}>
+            <div className={`type ${about.type}`}>
 
               <h2>{about.title}</h2>
 
@@ -90,8 +113,8 @@ export default class About extends Component {
 
       const content = Array.from(about.content);
       return (
-        <div className="about box">
-          <div className="type">
+        <div className="about box slide" id={`slide-${index}`}>
+          <div className={`type ${about.type}`}>
             <h2>{about.title}</h2>
             {content.map(b => <p>{b}</p>)}
           </div>
@@ -113,6 +136,7 @@ export default class About extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      beforeChange: (current, next) => this.beforeSlideChange(current, next),
     };
 
     return (

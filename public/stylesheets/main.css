@@ -426,20 +426,28 @@ a:active {
       display: -moz-flex;
       display: -ms-flexbox;
       display: flex; }
-      #about .slick-list .slick-slide.about .type ul li {
-        width: 50%; }
-        #about .slick-list .slick-slide.about .type ul li a {
-          outline: 0; }
-    #about .slick-list .slick-slide.about .type.social ul li a {
-      padding-left: 25px; }
-    #about .slick-list .slick-slide.about .type.social ul li a:before {
-      display: block;
-      content: '';
-      width: 20px;
-      height: 20px;
-      position: absolute;
-      background-repeat: no-repeat;
-      background-size: contain; }
+      #about .slick-list .slick-slide.about .type ul li a {
+        outline: 0; }
+    #about .slick-list .slick-slide.about .type.client ul {
+      flex-wrap: wrap; }
+      @media (max-width: 768px) {
+        #about .slick-list .slick-slide.about .type.client ul {
+          flex-direction: column; } }
+      #about .slick-list .slick-slide.about .type.client ul li {
+        padding-left: 30px;
+        padding-bottom: 10px; }
+    #about .slick-list .slick-slide.about .type.social ul li {
+      width: 50%; }
+      #about .slick-list .slick-slide.about .type.social ul li a {
+        padding-left: 25px; }
+      #about .slick-list .slick-slide.about .type.social ul li a:before {
+        display: block;
+        content: '';
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain; }
     #about .slick-list .slick-slide.about .type.social ul li:first-child a:before {
       background-image: url("../images/about/linkedin-logo.png"); }
     #about .slick-list .slick-slide.about .type.social ul li:last-child a:before {
