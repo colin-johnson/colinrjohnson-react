@@ -12,19 +12,33 @@
         position: relative;
         overflow: hidden;
 
+        &.slick-active {
+          &:before {
+            top: -85px;
+          }
+
+          &:after {
+            bottom: -270px;
+          }
+        }
+
         &:before {
           content: '';
           display: block;
           position: absolute;
           height: 25vh;
           width: calc(100% + 22px);
-          top: -155px;
+          top: 0px;
           left: -11px;
-          background: white;
+          background: $grey;
           transform: rotate(-7deg) skew(-10deg);
           -webkit-transform: rotate(-7deg) skew(-10deg);
-          border-top: 269px solid white;
-          border-left: 100px solid white;
+          border-top: 269px solid $grey;
+          border-left: 100px solid $grey;
+          -webkit-box-shadow: 3px 3px 10px 0px rgba(59,59,59,0.4);
+          -moz-box-shadow: 3px 3px 10px 0px rgba(59,59,59,0.4);
+          box-shadow: 3px 3px 10px 0px rgba(59,59,59,0.4);
+          transition: top 0.5s ease-in-out 0.2s;
           @include breakpoint(md) {
             top: -132px;
           }
@@ -36,12 +50,16 @@
           position: absolute;
           height: 25vh;
           width: calc(100% + 22px);
-          bottom: -250px;
-          background: white;
+          bottom: -350px;
+          background: $grey;
           transform: rotate(-7deg) skew(-10deg);
           -webkit-transform: rotate(-7deg) skew(-10deg);
-          border-top: 269px solid white;
-          border-left: 100px solid white;
+          border-top: 269px solid $grey;
+          border-left: 100px solid $grey;
+          -webkit-box-shadow: -3px -3px 10px 0px rgba(59,59,59,0.4);
+          -moz-box-shadow: -3px -3px 10px 0px rgba(59,59,59,0.4);
+          box-shadow: -3px -3px 10px 0px rgba(59,59,59,0.4);
+          transition: bottom 0.5s ease-in-out 0.2s;
         }
 
         .container-fluid {
@@ -51,8 +69,18 @@
           position: relative;
           background: rgba(255, 255, 255, 0.1);
 
+          .header {
+            height: 190px;
+            width: 100%;
+            background: white;
+            position: absolute;
+            -webkit-box-shadow: 1px 3px 10px 0px rgba(59,59,59,0.4);
+            -moz-box-shadow: 1px 3px 10px 0px rgba(59,59,59,0.4);
+            box-shadow: 1px 3px 10px 0px rgba(59,59,59,0.4);
+          }
+
           .container {
-            padding-top: 100px;
+            padding-top: 120px;
             @include breakpoint(md) {
               padding-top: 90px;
             }
@@ -93,6 +121,10 @@
               position: relative;
               width: 100%;
               float: left;
+              top: 40%;
+              transform: translateY(-50%);
+              -webkit-transform: translateY(-50%);
+              -ms-transform: translateY(-50%);
 
               &#intro-slide {
                 top: calc(50% - 50px);
@@ -181,6 +213,9 @@
                           padding: 0 12px;
                           font-size: 12px;
                           display: inline-block;
+                          -webkit-box-shadow: 0px 1px 1px 0px rgba(59,59,59,0.5);
+                          -moz-box-shadow: 0px 1px 1px 0px rgba(59,59,59,0.5);
+                          box-shadow: 0px 1px 1px 0px rgba(59,59,59,0.5);
                         }
                       }
                     }

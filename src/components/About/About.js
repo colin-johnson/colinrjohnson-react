@@ -28,11 +28,23 @@ export default class About extends Component {
   beforeSlideChange(current, next) {
     const nextSlide = document.getElementById(`slide-${next}`);
     const currentSlide = document.getElementById(`slide-${next - 1}`);
+    const nextDot = document.getElementsByClassName('slick-dots')[0].getElementsByTagName('div');
+
+    for (let x = 0; x < nextDot.length; x++) {
+      nextDot[x].getElementsByTagName('span')[0].classList.remove('slick-active');
+    }
+
+    if ((next - 1) >= 0) {
+      currentSlide.getElementsByClassName('type')[0].classList.add('hidden');
+    }
+    nextSlide.getElementsByClassName('type')[0].classList.remove('hidden');
+    nextDot[next].getElementsByTagName('span')[0].classList.add('slick-active');
   }
 
   componentDidMount() {
     window.addEventListener('wheel', e => this.slide(e));
     document.getElementById('about').style.opacity = '1';
+    document.getElementById('slide-0').getElementsByClassName('type')[0].classList.remove('hidden');
   }
 
   renderData() {
@@ -40,7 +52,7 @@ export default class About extends Component {
       if (about.type === 'nested') {
         return (
           <div className="about box slide" id={`slide-${index}`}>
-            <div className={`type ${about.type}`}>
+            <div className={`type ${about.type} hidden`}>
 
               <h2>{about.title}</h2>
               <div className="content">
@@ -63,7 +75,7 @@ export default class About extends Component {
       if (about.type === 'social') {
         return (
           <div className="about box slide" id={`slide-${index}`}>
-            <div className={`type social ${about.type}`}>
+            <div className={`type social ${about.type} hidden`}>
 
               <h2>{about.title}</h2>
 
@@ -82,7 +94,7 @@ export default class About extends Component {
       if (about.type === 'client') {
         return (
           <div className="about box slide" id={`slide-${index}`}>
-            <div className={`type ${about.type}`}>
+            <div className={`type ${about.type} hidden`}>
 
               <h2>{about.title}</h2>
 
@@ -97,7 +109,7 @@ export default class About extends Component {
       if (about.type === 'href') {
         return (
           <div className="about box slide" id={`slide-${index}`}>
-            <div className={`type ${about.type}`}>
+            <div className={`type ${about.type} hidden`}>
 
               <h2>{about.title}</h2>
 
@@ -114,7 +126,7 @@ export default class About extends Component {
       const content = Array.from(about.content);
       return (
         <div className="about box slide" id={`slide-${index}`}>
-          <div className={`type ${about.type}`}>
+          <div className={`type ${about.type} hidden`}>
             <h2>{about.title}</h2>
             {content.map(b => <p>{b}</p>)}
           </div>
@@ -124,6 +136,7 @@ export default class About extends Component {
   }
 
   render() {
+    const types = ['about', 'experience', 'clientele', 'resumé', 'connect', 'contact'];
     const settings = {
       dots: true,
       infinite: false,
@@ -136,6 +149,16 @@ export default class About extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      appendDots: dots => (
+        <ul>
+          {dots.map((dot, index) => (
+            <div key={index} className="dot-container">
+              {dot}
+              <span className={(index === 0) && 'slick-active'}>{types[index]}</span>
+            </div>
+          ))}
+        </ul>
+      ),
       beforeChange: (current, next) => this.beforeSlideChange(current, next),
     };
 

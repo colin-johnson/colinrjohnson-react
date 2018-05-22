@@ -7,6 +7,7 @@ export default class Projects extends Component {
     super(props);
 
     this.renderProjects = this.renderProjects.bind(this);
+    this.beforeSlideChange = this.beforeSlideChange.bind(this);
     this.slide = this.slide.bind(this);
   }
 
@@ -24,18 +25,39 @@ export default class Projects extends Component {
     }
   }
 
+  beforeSlideChange(current, next) {
+    console.log(next);
+    const nextSlide = document.getElementById(`project-${next}`);
+    console.log(nextSlide);
+    nextSlide.classList.add('active');
+    // const currentSlide = document.getElementById(`slide-${next - 1}`);
+    // const nextDot = document.getElementsByClassName('slick-dots')[0].getElementsByTagName('div');
+    //
+    // for (let x = 0; x < nextDot.length; x++) {
+    //   nextDot[x].getElementsByTagName('span')[0].classList.remove('slick-active');
+    // }
+    //
+    // if ((next - 1) >= 0) {
+    //   currentSlide.getElementsByClassName('type')[0].classList.add('hidden');
+    // }
+    // nextSlide.getElementsByClassName('type')[0].classList.remove('hidden');
+    // nextDot[next].getElementsByTagName('span')[0].classList.add('slick-active');
+  }
+
   componentDidMount() {
     window.addEventListener('wheel', e => this.slide(e));
     document.getElementById('projects').style.opacity = '1';
   }
 
   renderProjects() {
-    return projectData.map((project) => {
+    return projectData.map((project, index) => {
       const bgImage = { backgroundImage: `url("${project.image}")` };
       return (
-        <div className="project box" style={bgImage}>
+        <div className="project box" style={bgImage} id={`project-${index + 1}`}>
           <div className="container-fluid">
+            <div className="header" />
             <div className="container">
+
               <div className="title type">
                 <h2>{project.title}</h2>
               </div>
@@ -89,6 +111,14 @@ export default class Projects extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      appendDots: dots => (
+        <ul>
+          {dots.map((dot, index) => (
+            <div key={index} className="dot-container">{dot}</div>
+          ))}
+        </ul>
+      ),
+      beforeChange: (current, next) => this.beforeSlideChange(current, next),
     };
 
     return (
@@ -97,7 +127,7 @@ export default class Projects extends Component {
           {...settings}
           ref={projectsSlider => this.projectsSlider = projectsSlider}
         >
-          <div className="project box">
+          <div className="project box" id="project-0">
             <div className="container-fluid">
               <div className="container">
 

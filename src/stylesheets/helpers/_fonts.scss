@@ -18,6 +18,11 @@ h4 { font-size: 24px; }
 h5 { font-size: 20px; }
 h6 { font-size: 16px; }
 
+@include breakpoint(sm) {
+  h2 { font-size: 28px; }
+  h4 { font-size: 22px; }
+}
+
 p, a, div {
   font-family: $body-font;
   font-size: 16px;
@@ -28,11 +33,6 @@ p, a, div {
 }
 
 a {
-  color: $grey;
-  transition: color 0.3s ease-in-out;
-}
-
-a:hover, a:visited {
   color: $pink;
 }
 
