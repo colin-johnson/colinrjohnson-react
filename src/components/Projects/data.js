@@ -4,8 +4,8 @@
 const projectData = [
   {
     title: 'Instagram Automator',
-    summary: 'My Instagram-Bot application was a passion project of mine that grows your Instgram reach and following by automating it for you utilizing the Instagram API. I built the app from the ground up with user authentication, user sessions, a no SQL database, and credit card payment processing. User authentication was done and managed with Passport.js, Node.js and Express. The back end and data base is built and managed with Node.js, Express, Mongoose, and Mongo DB. Payment processing was handled by integrating the Stripe API. The front end was entirely built with React, Redux, and Javascript/ES6. And automating the users Instagram was done by integrating the Instagram API. Unfortunately, the app lives at about 90% complete because Instagram closed their API during development.',
-    responsibilities: ['Front End Development', 'Back End Development', 'Restful API Design', 'API Integrations', 'Dev Ops'],
+    summary: 'A passion project of mine that automates your Instagram reach and following for you by utilizing the Instagram API. Its features include user authentication by email, Instagram account link and authentication, user sessions, a noSQL database, credit card payment processing for subscription sign ups, a UI to set and control parameters for the Instagram automation, a dashboard for statistics to visualize growth, and account and billing settings. Unfortunately, the app lives at about 90% complete because Instagram closed their API during development*',
+    responsibilities: ['Front End Development', 'Back End Development', 'Restful API Design', 'API Integrations', 'Dev Ops', 'Project Scope'],
     technologies: [
       {
         title: 'Front End',
@@ -26,7 +26,7 @@ const projectData = [
   {
     title: 'JOEY Restaurants',
     summary: 'Being the lead Developer on the complete rebuild of the JOEY Restaurants website allowed me to utilize both Back End and Front End skill sets. The back end is built on Craft CMS and PHP. The front end is made of Twig templates, Javascript/ES6, React.js. Using and integrating with Craft Element-API, QSR API, MailChimp API, and Workable API for a rich and featureful experience.',
-    responsibilities: ['Front End Development', 'Back End Development', 'API Integrations', 'Dev Ops'],
+    responsibilities: ['Front End Development', 'Back End Development', 'API Integrations', 'Dev Ops', 'Project Scope'],
     technologies: [
       {
         title: 'Front End',
@@ -42,12 +42,12 @@ const projectData = [
       },
     ],
     image: '../images/projects/joey-bg.jpg',
-    href: 'http://joeyrestaurants.com/',
+    href: 'https://joeyrestaurants.com/',
   },
   {
     title: 'Lynberg & Watkins',
-    summary: 'Lynberg & Watkins is a law firm that came to me for a fresh new modern website. To manage their database of attorneys and clients I used Node.js with Express, and Mongo DB. The entire front end was built using React.js, which was perfect for managing filtered searches, predictive searches and more. They also wanted a blog page manageable through with Wordpress. I accessed the Wordpress API and pulled in their blog articles to their site. The end product was a fluid, fast reacting, modern, eye-catching website.',
-    responsibilities: ['Front End Development', 'Back End Development'],
+    summary: 'Lynberg & Watkins is a law firm that came to me for a fresh new modern website. To manage their database of attorneys and clients I used Node.js with Express, and Mongo DB. The entire front end was built using React.js, which was perfect for managing filtered searches, predictive searches and more. They also wanted a blog page manageable through Wordpress. I accessed the Wordpress API and pulled in their blog articles to their site. The end product was a fluid, fast reacting, modern, eye-catching website.',
+    responsibilities: ['Front End Development', 'Back End Development', 'Project Scope'],
     technologies: [
       {
         title: 'Front End',

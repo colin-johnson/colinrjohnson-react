@@ -10,6 +10,7 @@
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.0",
     "false": "0.0.4",
+    "is-mobile": "^0.3.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-gsap-enhancer": "^0.3.0",

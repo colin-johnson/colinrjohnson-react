@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
+import mobile from 'is-mobile';
 import projectData from './data';
 
 export default class Projects extends Component {
@@ -13,39 +14,54 @@ export default class Projects extends Component {
 
   slide(e) {
     e.preventDefault();
-    const neg = -25;
-    const pos = 25;
-    const projects = document.getElementById('projects');
+    if (!mobile()) {
+      const neg = -25;
+      const pos = 25;
+      const projects = document.getElementById('projects');
 
-    if (projects !== null) {
-      if (e.wheelDelta >= pos || e.wheelDelta <= neg) {
-        if (Math.sign(e.wheelDelta) === 1) document.getElementById('projects').getElementsByClassName('slick-next')[0].click();
-        if (Math.sign(e.wheelDelta) === -1) document.getElementById('projects').getElementsByClassName('slick-prev')[0].click();
+      if (projects !== null) {
+        if (e.wheelDelta >= pos || e.wheelDelta <= neg) {
+          if (Math.sign(e.wheelDelta) === 1) this.projectsSlider.slickNext();
+          if (Math.sign(e.wheelDelta) === -1) this.projectsSlider.slickPrev();
+        }
       }
     }
   }
 
   beforeSlideChange(current, next) {
-    console.log(next);
     const nextSlide = document.getElementById(`project-${next}`);
-    console.log(nextSlide);
-    nextSlide.classList.add('active');
-    // const currentSlide = document.getElementById(`slide-${next - 1}`);
-    // const nextDot = document.getElementsByClassName('slick-dots')[0].getElementsByTagName('div');
-    //
-    // for (let x = 0; x < nextDot.length; x++) {
-    //   nextDot[x].getElementsByTagName('span')[0].classList.remove('slick-active');
-    // }
-    //
-    // if ((next - 1) >= 0) {
-    //   currentSlide.getElementsByClassName('type')[0].classList.add('hidden');
-    // }
-    // nextSlide.getElementsByClassName('type')[0].classList.remove('hidden');
-    // nextDot[next].getElementsByTagName('span')[0].classList.add('slick-active');
+    const currentSlide = document.getElementById(`project-${next - 1}`);
+    const projects = document.getElementsByClassName('project');
+
+    for (let x = 1; x < projects.length; x++) {
+      projects[x].getElementsByClassName('header')[0].classList.remove('slick-active');
+    }
+
+    if ((next - 1) >= 1) {
+      currentSlide.getElementsByClassName('title')[0].classList.add('hidden');
+      currentSlide.getElementsByClassName('project-content')[0].classList.add('hidden');
+      currentSlide.getElementsByClassName('link')[0].classList.add('hidden');
+    }
+
+    if (next > 0) {
+      nextSlide.getElementsByClassName('header')[0].classList.add('slick-active');
+      nextSlide.getElementsByClassName('title')[0].classList.remove('hidden');
+      nextSlide.getElementsByClassName('project-content')[0].classList.remove('hidden');
+      nextSlide.getElementsByClassName('link')[0].classList.remove('hidden');
+    }
   }
 
   componentDidMount() {
-    window.addEventListener('wheel', e => this.slide(e));
+    if (!mobile()) {
+      window.addEventListener('wheel', e => this.slide(e));
+    } else {
+      document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+      document.getElementsByTagName('body')[0].style.position = 'relative';
+      document.addEventListener('touchmove', e => e.preventDefault());
+      document.addEventListener('touchend', e => e.preventDefault());
+      document.addEventListener('touchstart', e => e.preventDefault());
+    }
+
     document.getElementById('projects').style.opacity = '1';
   }
 
@@ -58,11 +74,11 @@ export default class Projects extends Component {
             <div className="header" />
             <div className="container">
 
-              <div className="title type">
+              <div className="title type hidden">
                 <h2>{project.title}</h2>
               </div>
 
-              <div className="project-content">
+              <div className="project-content hidden">
                 <div className="summary type">
                   <p>{project.summary}</p>
                 </div>
@@ -88,7 +104,7 @@ export default class Projects extends Component {
                   </div>
                 </div>
               </div>
-              <div className="link type">
+              <div className="link type hidden">
                 <a href={project.href} target="_blank">View</a>
               </div>
             </div>
@@ -102,15 +118,13 @@ export default class Projects extends Component {
     const settings = {
       dots: true,
       infinite: false,
-      adaptiveHeight: true,
       vertical: true,
-      swipe: true,
-      swipToSlide: true,
-      touchMove: true,
-      draggable: true,
+      adaptiveHeight: true,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      swipe: true,
+      initialSlide: 0,
       appendDots: dots => (
         <ul>
           {dots.map((dot, index) => (
@@ -120,6 +134,13 @@ export default class Projects extends Component {
       ),
       beforeChange: (current, next) => this.beforeSlideChange(current, next),
     };
+
+    if (mobile()) {
+      // settings.verticalSwiping = true;
+      settings.swipeToSlide = true;
+      settings.touchMove = true;
+      settings.draggable = true;
+    }
 
     return (
       <div id="projects" className="page-container">
@@ -134,7 +155,7 @@ export default class Projects extends Component {
                 <div className="project-content" id="intro-slide">
                   <div className="summary type">
                     <h2 className="intro">Current highlighted projects of mine<span className="pink">.</span></h2>
-                    <p>Scroll to view</p>
+                    <p className="disclaimer">{(mobile()) ? 'Swipe left' : 'Scroll'} to view</p>
                   </div>
                 </div>
 

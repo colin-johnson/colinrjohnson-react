@@ -4,7 +4,7 @@
   }
 
   @else if $class == sm {
-    @media (max-width: 768px) { @content; }
+    @media (max-width: 767px) { @content; }
   }
 
   @else if $class == md {

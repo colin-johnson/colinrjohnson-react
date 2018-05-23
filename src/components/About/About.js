@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
+import mobile from 'is-mobile';
 import aboutData from './data';
 
 export default class About extends Component {
@@ -19,8 +20,8 @@ export default class About extends Component {
 
     if (about !== null) {
       if (e.wheelDelta >= pos || e.wheelDelta <= neg) {
-        if (Math.sign(e.wheelDelta) === 1) about.getElementsByClassName('slick-next')[0].click();
-        if (Math.sign(e.wheelDelta) === -1) about.getElementsByClassName('slick-prev')[0].click();
+        if (Math.sign(e.wheelDelta) === 1) this.aboutSlider.slickNext();
+        if (Math.sign(e.wheelDelta) === -1) this.aboutSlider.slickPrev();
       }
     }
   }
@@ -37,12 +38,16 @@ export default class About extends Component {
     if ((next - 1) >= 0) {
       currentSlide.getElementsByClassName('type')[0].classList.add('hidden');
     }
+
     nextSlide.getElementsByClassName('type')[0].classList.remove('hidden');
     nextDot[next].getElementsByTagName('span')[0].classList.add('slick-active');
   }
 
   componentDidMount() {
-    window.addEventListener('wheel', e => this.slide(e));
+    if (!mobile()) {
+      window.addEventListener('wheel', e => this.slide(e));
+    }
+
     document.getElementById('about').style.opacity = '1';
     document.getElementById('slide-0').getElementsByClassName('type')[0].classList.remove('hidden');
   }
@@ -129,6 +134,8 @@ export default class About extends Component {
           <div className={`type ${about.type} hidden`}>
             <h2>{about.title}</h2>
             {content.map(b => <p>{b}</p>)}
+            {(index === 0) && (mobile()) ? <p className="disclaimer">Swipe left to read more</p> :
+            <p className="disclaimer">Scroll to read more</p>}
           </div>
         </div>
       );
@@ -140,15 +147,12 @@ export default class About extends Component {
     const settings = {
       dots: true,
       infinite: false,
-      adaptiveHeight: true,
       vertical: true,
-      swipe: true,
-      swipToSlide: true,
-      touchMove: true,
-      draggable: true,
+      adaptiveHeight: true,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      swipe: true,
       appendDots: dots => (
         <ul>
           {dots.map((dot, index) => (
@@ -161,6 +165,13 @@ export default class About extends Component {
       ),
       beforeChange: (current, next) => this.beforeSlideChange(current, next),
     };
+
+    if (mobile()) {
+      // settings.verticalSwiping = true;
+      settings.swipeToSlide = true;
+      settings.touchMove = true;
+      settings.draggable = true;
+    }
 
     return (
       <div id="about" className="page-container">

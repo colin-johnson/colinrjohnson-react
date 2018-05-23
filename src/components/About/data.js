@@ -5,7 +5,7 @@ const aboutData = [
   {
     type: 'single',
     title: 'About',
-    content: ['A passionate Full Stack Web Engineer based in Portland, OR.', 'React & Node.js enthusiast, vanilla Javascript lover, and intuitive, concise, and performant code writer.', 'Agile and adaptable in nature, with the ability to conceptualize, scope, and lead a build from idea to launch.'],
+    content: ['A passionate Web Engineer based in Portland, OR.', 'React & Node.js enthusiast, vanilla Javascript lover, and intuitive, concise, and performant code writer.', 'Agile and adaptable in nature, with the ability to conceptualize, scope, and lead a build from idea to launch.'],
   },
   {
     type: 'nested',
@@ -13,7 +13,7 @@ const aboutData = [
     content: [
       {
         title: 'Front End',
-        languages: ['Javascript/ES6', 'React', 'Redux', 'HTML5', 'CSS3', 'SASS', 'Vue.js', 'JQuery (if necessary)'],
+        languages: ['Javascript/ES6', 'React', 'Redux', 'HTML5', 'CSS3', 'SASS', 'Vue.js', 'JQuery'],
       },
       {
         title: 'Back End',
@@ -31,8 +31,8 @@ const aboutData = [
   },
   {
     type: 'client',
-    title: 'Selected Clients',
-    content: ['Nike', 'Red Bull', 'Amazon', 'Joey Restaurants', 'Lynberg & Watkins', 'South Bay Trainer', 'Led Lenser', 'Art Institutes', 'Honda', 'Toyota'],
+    title: 'Clientele',
+    content: ['Nike', 'Red Bull', 'Amazon', 'Joey Restaurants', 'Lynberg & Watkins', 'South Bay Trainer', 'Led Lenser', 'Art Institutes', 'Honda', 'Toyota', '..and more'],
   },
   // {
   //   type: 'single',
@@ -43,7 +43,7 @@ const aboutData = [
     type: 'href',
     title: 'Resumé',
     content: 'Click Me',
-    href: '/ColinJohnson-Resume.pdf',
+    href: '/ColinJohnson-Resume-2018.pdf',
   },
   {
     type: 'social',
