@@ -56,22 +56,29 @@ export default class Projects extends Component {
       window.addEventListener('wheel', e => this.slide(e));
     } else {
       const projects = document.getElementById('projects');
-      // const container = document.getElementsByClassName('main-container')[0];
-      // let dots;
+      const container = document.getElementsByClassName('main-container')[0];
+      let dots;
       projects.style.overflow = 'hidden';
       projects.style.position = 'relative';
-      projects.addEventListener('touchmove', e => e.preventDefault());
-      projects.addEventListener('touchend', e => e.preventDefault());
-      projects.addEventListener('touchstart', e => e.preventDefault());
-      //
-      // setTimeout(() => {
-      //   dots = document.getElementsByClassName('slick-dots')[0];
-      //   dots.classList.add('projects');
-      //   container.insertBefore(dots, container.firstChild);
-      // }, 10);
+      // projects.addEventListener('touchmove', e => e.preventDefault());
+      // projects.addEventListener('touchend', e => e.preventDefault());
+      // projects.addEventListener('touchstart', e => e.preventDefault());
+
+      setTimeout(() => {
+        dots = document.getElementsByClassName('slick-dots')[0];
+        dots.classList.add('projects');
+        container.insertBefore(dots, container.firstChild);
+      }, 10);
     }
 
     document.getElementById('projects').style.opacity = '1';
+  }
+
+  componentWillUnmount() {
+    if (mobile()) {
+      const container = document.getElementsByClassName('main-container')[0];
+      container.removeChild(container.firstChild);  
+    }
   }
 
   renderProjects() {

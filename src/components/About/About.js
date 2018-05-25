@@ -133,12 +133,15 @@ export default class About extends Component {
       return (
         <div className="about box slide" id={`slide-${index}`}>
           <div className={`type ${about.type} hidden`}>
-            <h2>{about.title}</h2>
-            {content.map(b => <p>{b}</p>)}
-            {(index === 0) &&
-              (mobile())
-              ? <p style={style} className="plus">Swipe left to read more</p>
-              : <p style={style} className="plus">Scroll to read more</p>}
+            <div className="copy">
+              <h2>{about.title}</h2>
+              {content.map(b => <p>{b}</p>)}
+              {(index === 0) &&
+                (mobile())
+                ? <p style={style} className="plus">Swipe left to read more</p>
+                : <p style={style} className="plus">Scroll to read more</p>}
+            </div>
+            <div className="profile-pic"></div>
           </div>
         </div>
       );

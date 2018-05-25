@@ -177,7 +177,10 @@
 
               @include breakpoint(sm) {
                 transform: none;
-                top: 0;
+                top: 10px;
+                overflow-y: scroll;
+                height: calc(100vh - 130px);
+                padding-bottom: 20px;
               }
 
               &.hidden {
@@ -188,6 +191,8 @@
                 top: calc(50% - 50px);
                 transform: translateY(-50%);
                 position: relative;
+                height: auto;
+                padding-bottom: 0;
 
                 p {
                   color: $grey;
@@ -198,7 +203,7 @@
                 padding: 30px;
                 @include breakpoint(sm) {
                   &:first-child {
-                    padding-top: 30px;
+                    padding-top: 20px;
                   }
                   padding: 0 15px 15px 15px;
                 }

@@ -33,6 +33,9 @@
 
           p {
             padding-bottom: 15px;
+            &:last-child {
+              margin-top: 10px;
+            }
           }
 
           ul {
@@ -49,6 +52,36 @@
 
           &.hidden {
             opacity: 0;
+          }
+
+          &.single {
+            @include flexbox;
+            align-items: center;
+
+            .copy {
+              width: calc(100% - 210px);
+              margin-right: 10px;
+              @include breakpoint(sm) {
+                width: 100%;
+                margin-right: 0;
+              }
+            }
+
+            .profile-pic {
+              width: 180px;
+              height: 180px;
+              border-radius: 99px;
+              background-image: url('../images/about/colin-r-johnson.jpg');
+              background-position: center center;
+              background-size: contain;
+              margin: 10px;
+              -webkit-box-shadow: 3px 3px 5px 0px rgba(59,59,59,0.4);
+              -moz-box-shadow: 3px 3px 5px 0px rgba(59,59,59,0.4);
+              box-shadow: 3px 3px 5px 0px rgba(59,59,59,0.4);
+              @include breakpoint(sm) {
+                display: none;
+              }
+            }
           }
 
           &.nested {
@@ -118,6 +151,9 @@
 
               h4 {
                 padding-bottom: 8px;
+                @include breakpoint(sm) {
+                  padding-bottom: 5px;
+                }
               }
 
               ul {
@@ -133,8 +169,8 @@
                   padding-right: 30px;
                   display: inline;
                   @include breakpoint(sm) {
-                    font-size: 14px;
-                    padding-right: 20px;
+                    font-size: 12px;
+                    padding-right: 15px;
                   }
                   &:last-child {
                     padding-right: 0;

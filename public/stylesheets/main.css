@@ -180,6 +180,38 @@ a:active {
     width: 100%;
     height: 100%;
     position: absolute; }
+    #main .main-container .slick-dots.projects {
+      display: inline-table !important;
+      position: fixed;
+      left: 0;
+      transform: translateY(-50%);
+      top: 50%;
+      width: auto;
+      z-index: 1000; }
+      @media (max-width: 767px) {
+        #main .main-container .slick-dots.projects {
+          left: -7px; } }
+      #main .main-container .slick-dots.projects .dot-container {
+        position: relative; }
+      #main .main-container .slick-dots.projects span {
+        position: absolute;
+        font-size: 10px;
+        top: 8px;
+        transition: all 0.2s ease-in-out; }
+        @media (max-width: 767px) {
+          #main .main-container .slick-dots.projects span {
+            display: none; } }
+        #main .main-container .slick-dots.projects span.slick-active {
+          color: #F35D64;
+          font-weight: bold; }
+      #main .main-container .slick-dots.projects li {
+        position: relative; }
+        #main .main-container .slick-dots.projects li button:before {
+          opacity: 1;
+          transition: all 0.2s ease-in-out; }
+        #main .main-container .slick-dots.projects li.slick-active button:before {
+          opacity: 1;
+          color: #F35D64; }
   #main .page-container {
     height: 100%;
     width: 100%;
@@ -447,6 +479,8 @@ a:active {
           padding-bottom: 20px; } }
     #about .slick-list .slick-slide.about .type p {
       padding-bottom: 15px; }
+      #about .slick-list .slick-slide.about .type p:last-child {
+        margin-top: 10px; }
     #about .slick-list .slick-slide.about .type ul {
       display: -webkit-box;
       display: -webkit-flex;
@@ -457,6 +491,34 @@ a:active {
         outline: 0; }
     #about .slick-list .slick-slide.about .type.hidden {
       opacity: 0; }
+    #about .slick-list .slick-slide.about .type.single {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      align-items: center; }
+      #about .slick-list .slick-slide.about .type.single .copy {
+        width: calc(100% - 210px);
+        margin-right: 10px; }
+        @media (max-width: 767px) {
+          #about .slick-list .slick-slide.about .type.single .copy {
+            width: 100%;
+            margin-right: 0; } }
+      #about .slick-list .slick-slide.about .type.single .profile-pic {
+        width: 180px;
+        height: 180px;
+        border-radius: 99px;
+        background-image: url("../images/about/colin-r-johnson.jpg");
+        background-position: center center;
+        background-size: contain;
+        margin: 10px;
+        -webkit-box-shadow: 3px 3px 5px 0px rgba(59, 59, 59, 0.4);
+        -moz-box-shadow: 3px 3px 5px 0px rgba(59, 59, 59, 0.4);
+        box-shadow: 3px 3px 5px 0px rgba(59, 59, 59, 0.4); }
+        @media (max-width: 767px) {
+          #about .slick-list .slick-slide.about .type.single .profile-pic {
+            display: none; } }
     @media (max-width: 767px) {
       #about .slick-list .slick-slide.about .type.nested .content p {
         padding-bottom: 0; } }
@@ -491,6 +553,9 @@ a:active {
       padding: 5px 0; }
       #about .slick-list .slick-slide.about .type .content div h4 {
         padding-bottom: 8px; }
+        @media (max-width: 767px) {
+          #about .slick-list .slick-slide.about .type .content div h4 {
+            padding-bottom: 5px; } }
       #about .slick-list .slick-slide.about .type .content div ul {
         padding-left: 30px; }
         @media (max-width: 992px) {
@@ -508,8 +573,8 @@ a:active {
           display: inline; }
           @media (max-width: 767px) {
             #about .slick-list .slick-slide.about .type .content div ul li {
-              font-size: 14px;
-              padding-right: 20px; } }
+              font-size: 12px;
+              padding-right: 15px; } }
           #about .slick-list .slick-slide.about .type .content div ul li:last-child {
             padding-right: 0; }
 
@@ -655,13 +720,18 @@ a:active {
           @media (max-width: 767px) {
             #projects .slick-list .slick-slide.project .container-fluid .container .project-content {
               transform: none;
-              top: 0; } }
+              top: 10px;
+              overflow-y: scroll;
+              height: calc(100vh - 130px);
+              padding-bottom: 20px; } }
           #projects .slick-list .slick-slide.project .container-fluid .container .project-content.hidden {
             opacity: 0; }
           #projects .slick-list .slick-slide.project .container-fluid .container .project-content#intro-slide {
             top: calc(50% - 50px);
             transform: translateY(-50%);
-            position: relative; }
+            position: relative;
+            height: auto;
+            padding-bottom: 0; }
             #projects .slick-list .slick-slide.project .container-fluid .container .project-content#intro-slide p {
               color: #3b3b3b; }
           #projects .slick-list .slick-slide.project .container-fluid .container .project-content .type {
@@ -670,7 +740,7 @@ a:active {
               #projects .slick-list .slick-slide.project .container-fluid .container .project-content .type {
                 padding: 0 15px 15px 15px; }
                 #projects .slick-list .slick-slide.project .container-fluid .container .project-content .type:first-child {
-                  padding-top: 30px; } }
+                  padding-top: 20px; } }
             #projects .slick-list .slick-slide.project .container-fluid .container .project-content .type h4 {
               padding-bottom: 14px; }
             @media (max-width: 767px) {
