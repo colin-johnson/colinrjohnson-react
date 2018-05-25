@@ -180,8 +180,6 @@ a:active {
     width: 100%;
     height: 100%;
     position: absolute; }
-  #main .plus {
-    color: #F35D64; }
   #main .page-container {
     height: 100%;
     width: 100%;
@@ -192,6 +190,9 @@ a:active {
 
 *, *:before, *:after {
   box-sizing: border-box; }
+
+.plus {
+  color: #F35D64 !important; }
 
 .geo {
   position: relative;
@@ -207,7 +208,7 @@ a:active {
   border-bottom: 30px solid transparent; }
 
 .disclaimer {
-  color: lightgrey !important;
+  color: lightgrey;
   margin-top: 20px; }
 
 .slick-slider .slick-arrow {

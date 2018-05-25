@@ -129,13 +129,16 @@ export default class About extends Component {
       }
 
       const content = Array.from(about.content);
+      const style = { fontSize: '14px' };
       return (
         <div className="about box slide" id={`slide-${index}`}>
           <div className={`type ${about.type} hidden`}>
             <h2>{about.title}</h2>
             {content.map(b => <p>{b}</p>)}
-            {(index === 0) && (mobile()) ? <p className="disclaimer">Swipe left to read more</p> :
-            <p className="disclaimer">Scroll to read more</p>}
+            {(index === 0) &&
+              (mobile())
+              ? <p style={style} className="plus">Swipe left to read more</p>
+              : <p style={style} className="plus">Scroll to read more</p>}
           </div>
         </div>
       );

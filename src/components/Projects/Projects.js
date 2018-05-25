@@ -55,11 +55,20 @@ export default class Projects extends Component {
     if (!mobile()) {
       window.addEventListener('wheel', e => this.slide(e));
     } else {
-      document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-      document.getElementsByTagName('body')[0].style.position = 'relative';
-      document.addEventListener('touchmove', e => e.preventDefault());
-      document.addEventListener('touchend', e => e.preventDefault());
-      document.addEventListener('touchstart', e => e.preventDefault());
+      const projects = document.getElementById('projects');
+      // const container = document.getElementsByClassName('main-container')[0];
+      // let dots;
+      projects.style.overflow = 'hidden';
+      projects.style.position = 'relative';
+      projects.addEventListener('touchmove', e => e.preventDefault());
+      projects.addEventListener('touchend', e => e.preventDefault());
+      projects.addEventListener('touchstart', e => e.preventDefault());
+      //
+      // setTimeout(() => {
+      //   dots = document.getElementsByClassName('slick-dots')[0];
+      //   dots.classList.add('projects');
+      //   container.insertBefore(dots, container.firstChild);
+      // }, 10);
     }
 
     document.getElementById('projects').style.opacity = '1';
@@ -155,7 +164,7 @@ export default class Projects extends Component {
                 <div className="project-content" id="intro-slide">
                   <div className="summary type">
                     <h2 className="intro">Current highlighted projects of mine<span className="pink">.</span></h2>
-                    <p className="disclaimer">{(mobile()) ? 'Swipe left' : 'Scroll'} to view</p>
+                    <p className="plus">{(mobile()) ? 'Swipe left' : 'Scroll'} to view</p>
                   </div>
                 </div>
 

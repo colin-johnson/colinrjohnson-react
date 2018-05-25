@@ -180,8 +180,38 @@ a:active {
     width: 100%;
     height: 100%;
     position: absolute; }
-  #main .plus {
-    color: #F35D64; }
+    #main .main-container .slick-dots.projects {
+      display: inline-table !important;
+      position: fixed;
+      left: 0;
+      transform: translateY(-50%);
+      top: 50%;
+      width: auto;
+      z-index: 1000; }
+      @media (max-width: 767px) {
+        #main .main-container .slick-dots.projects {
+          left: -7px; } }
+      #main .main-container .slick-dots.projects .dot-container {
+        position: relative; }
+      #main .main-container .slick-dots.projects span {
+        position: absolute;
+        font-size: 10px;
+        top: 8px;
+        transition: all 0.2s ease-in-out; }
+        @media (max-width: 767px) {
+          #main .main-container .slick-dots.projects span {
+            display: none; } }
+        #main .main-container .slick-dots.projects span.slick-active {
+          color: #F35D64;
+          font-weight: bold; }
+      #main .main-container .slick-dots.projects li {
+        position: relative; }
+        #main .main-container .slick-dots.projects li button:before {
+          opacity: 1;
+          transition: all 0.2s ease-in-out; }
+        #main .main-container .slick-dots.projects li.slick-active button:before {
+          opacity: 1;
+          color: #F35D64; }
   #main .page-container {
     height: 100%;
     width: 100%;
@@ -192,6 +222,9 @@ a:active {
 
 *, *:before, *:after {
   box-sizing: border-box; }
+
+.plus {
+  color: #F35D64 !important; }
 
 .geo {
   position: relative;
@@ -207,7 +240,7 @@ a:active {
   border-bottom: 30px solid transparent; }
 
 .disclaimer {
-  color: lightgrey !important;
+  color: lightgrey;
   margin-top: 20px; }
 
 .slick-slider .slick-arrow {

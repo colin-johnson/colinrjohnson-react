@@ -5,7 +5,7 @@ const aboutData = [
   {
     type: 'single',
     title: 'About',
-    content: ['A passionate Web Engineer based in Portland, OR.', 'React & Node.js enthusiast, vanilla Javascript lover, and intuitive, concise, and performant code writer.', 'Agile and adaptable in nature, with the ability to conceptualize, scope, and lead a build from idea to launch.'],
+    content: ['A passionate Web Engineer based in Portland, OR.', 'React & Node.js enthusiast, vanilla Javascript lover, and intuitive, concise, and performant code writer.', 'Agile and adaptable in nature, with the ability to conceptualize, scope, and lead a project from idea to launch.'],
   },
   {
     type: 'nested',
@@ -21,7 +21,7 @@ const aboutData = [
       },
       {
         title: 'Tools',
-        languages: ['Git', 'Webpack', 'Jest w/ Enzyme', 'Babel', 'NPM'],
+        languages: ['Docker', 'Git', 'Webpack', 'Jest w/ Enzyme', 'Babel', 'NPM'],
       },
       {
         title: 'Other',
