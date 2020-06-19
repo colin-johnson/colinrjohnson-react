@@ -1,0 +1,99 @@
+#nav-menu {
+  width:100%;
+  position: absolute;
+  top: 15px;
+  z-index: 1000;
+  opacity: 0;
+
+  .row {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+      height: 45px;
+    }
+
+    .geo {
+      position: relative;
+      height: 0px;
+      width: 0px;
+      top: -24px;
+      left: 0px;
+      transform: rotate(-5deg) skew(-40deg);
+      -webkit-transform: rotate(-5deg) skew(-40deg);
+      border-top: 70px solid #f8f8f8;
+      border-left: 239px solid #f8f8f8;
+      border-right: 27px solid transparent;
+      border-bottom: 10px solid transparent;
+    }
+  }
+
+  #home-btn {
+    position: relative;
+    top: -90px;
+    left: 35px;
+    &:visited {
+      color: $grey;
+    }
+    h1 {
+      font-size: 28px;
+      color: $grey;
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: $pink;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  .nav-menu-container {
+    // display: flex;
+    // display: -webkit-flex;
+    // justify-content: flex-end;
+    @include breakpoint(sm) {
+      position: absolute;
+      right: 0;
+      display: flex;
+      flex-direction: column-reverse;
+      text-align: right;
+    }
+
+    .nav-menu-button {
+      position: relative;
+      margin: 0 30px;
+      transition: all .3s ease;
+      @include flex;
+      color: $grey;
+      text-decoration: none;
+      @include breakpoint(sm) {
+        font-size: 12px;
+      }
+
+      &.active {
+        color: $pink !important;
+      }
+    }
+
+    .nav-menu-button:hover {
+      cursor: pointer;
+      color:$pink;
+    }
+  }
+
+}
+
+// #nav-menu {
+//   animation: fadein 3s 3.5s 1 normal forwards;
+// }
+
+@keyframes fadein {
+  0% {  opacity: 0;  }
+  50% {  opacity: 1;  }
+  100% {  opacity: 1;  }
+}

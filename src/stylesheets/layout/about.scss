@@ -1,0 +1,186 @@
+#about {
+  opacity: 0;
+  transition: opacity 1s ease;
+
+  .slick-list {
+    .slick-slide {
+      &.about {
+        .type {
+          top: 50%;
+          position: relative;
+          transform: translateY(-50%);
+          transition: opacity 0.7s ease-in 0.2s;
+          padding-left: 100px;
+          opacity: 1;
+
+          @include breakpoint(md) {
+            padding-left: 80px;
+            padding-right: 80px;
+          }
+
+          @include breakpoint(sm) {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+
+          h2 {
+            position: relative;
+            padding-bottom: 30px;
+            @include breakpoint(sm) {
+              padding-bottom: 20px;
+            }
+          }
+
+          p {
+            padding-bottom: 15px;
+            &:last-child {
+              margin-top: 10px;
+            }
+          }
+
+          ul {
+            @include flexbox;
+
+            li {
+              // width: 50%;
+
+              a {
+                outline: 0;
+              }
+            }
+          }
+
+          &.hidden {
+            opacity: 0;
+          }
+
+          &.single {
+            @include flexbox;
+            align-items: center;
+
+            .copy {
+              width: calc(100% - 210px);
+              margin-right: 10px;
+              @include breakpoint(sm) {
+                width: 100%;
+                margin-right: 0;
+              }
+            }
+
+            .profile-pic {
+              width: 180px;
+              height: 180px;
+              border-radius: 99px;
+              background-image: url('../images/about/colin-r-johnson.jpg');
+              background-position: center center;
+              background-size: contain;
+              margin: 10px;
+              -webkit-box-shadow: 3px 3px 5px 0px rgba(59,59,59,0.4);
+              -moz-box-shadow: 3px 3px 5px 0px rgba(59,59,59,0.4);
+              box-shadow: 3px 3px 5px 0px rgba(59,59,59,0.4);
+              @include breakpoint(sm) {
+                display: none;
+              }
+            }
+          }
+
+          &.nested {
+            .content {
+              @include breakpoint(sm) {
+                p {
+                  padding-bottom: 0;
+                }
+              }
+            }
+          }
+
+          &.client {
+            ul {
+              flex-wrap: wrap;
+              @include breakpoint(sm) {
+                flex-direction: column;
+              }
+              li {
+                padding-left: 30px;
+                padding-bottom: 10px;
+
+                @include breakpoint(sm) {
+                  padding-left: 0;
+                }
+              }
+            }
+          }
+
+          &.social {
+            ul {
+
+              li {
+                width: 50%;
+                a {
+                  padding-left: 25px;
+                }
+
+                a:before {
+                  display: block;
+                  content: '';
+                  width: 20px;
+                  height: 20px;
+                  position: absolute;
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                }
+              }
+
+              li:first-child {
+                a:before {
+                  background-image: url('../images/about/linkedin-logo.png');
+                }
+              }
+
+              li:last-child {
+                a:before {
+                  background-image: url('../images/about/github-512.png');
+                }
+              }
+            }
+          }
+
+          .content {
+            div {
+              padding: 5px 0;
+
+              h4 {
+                padding-bottom: 8px;
+                @include breakpoint(sm) {
+                  padding-bottom: 5px;
+                }
+              }
+
+              ul {
+                padding-left: 30px;
+                @include breakpoint(md) {
+                  padding-left: 15px;
+                  @include flexbox;
+                  justify-content: flex-start;
+                  flex-wrap: wrap;
+                }
+
+                li {
+                  padding-right: 30px;
+                  display: inline;
+                  @include breakpoint(sm) {
+                    font-size: 12px;
+                    padding-right: 15px;
+                  }
+                  &:last-child {
+                    padding-right: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
