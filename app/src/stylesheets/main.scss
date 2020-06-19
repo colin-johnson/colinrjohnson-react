@@ -1,21 +1,20 @@
 /*--------------------------------------
          IMPORT HELPERS
 ---------------------------------------*/
-@import 'helpers/reset';
-@import 'helpers/colors';
-@import 'helpers/flexbox';
-@import "helpers/fonts";
-@import "helpers/mixins";
-@import "helpers/responsive";
+@import 'helpers/_reset';
+@import 'helpers/_colors';
+@import 'helpers/_flexbox';
+@import 'helpers/_flex';
+@import "helpers/_mixins";
+@import "helpers/_responsive";
+@import "helpers/_fonts";
+
 /*--------------------------------------
          IMPORT LAYOUT
 ---------------------------------------*/
-@import 'layout/base';
-@import 'layout/circles';
+@import 'layout/global';
+@import 'layout/slick-slider';
 @import 'layout/banner';
 @import 'layout/nav';
-@import 'layout/cards';
 @import 'layout/about';
-@import 'layout/modal';
 @import 'layout/projects';
-@import 'layout/project-modal';

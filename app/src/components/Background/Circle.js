@@ -26,7 +26,7 @@ export default class Circle extends Component {
       this.setState({
         top: this.randomNumber(h, 0),
         left: this.randomNumber(w, 0),
-        transition: this.randomNumber(40, 35),
+        transition: this.randomNumber(45, 40),
       });
     }, 10);
   }
@@ -36,7 +36,7 @@ export default class Circle extends Component {
       this.setState({
         top: this.randomNumber(h, 0),
         left: this.randomNumber(w2, 0),
-        transition: this.randomNumber(40, 35),
+        transition: this.randomNumber(45, 40),
       });
     }, this.state.transition * 1000);
   }
