@@ -43,13 +43,17 @@ const data = {
   },
   projectFour: {
     title: 'Lynberg & Watkins',
-    image: '',
+    image: '../images/projects/lynberg.jpg',
     content: {
-      summary: '',
-      responsibilities: ['Front End Development', 'Responsive Design'],
-      technologies: ['React', 'Javascript', 'HTML5', 'SASS', 'Webpack', 'EsLint', 'Babel'],
-      image: '../images/projects/sbt.png',
-      href: 'http://southbaytrainer.com/',
+      summary: 'Lynberg & Watkins law firm was in need of a whole new website. They hired my colleague and I ' +
+      'to create a modern, simplified, aesthetically pleasing website that showcased their lawyers and practice areas. ' +
+      'By utilizing React\'s unidirectional state flow, data integrity and management with props, and its easy ' +
+      'reusability I brought the project to life. Using the latest in Javascript ES6, and the SASS preprocessor with CSS3, ' +
+      'this project is fluid and seamless, and it will remain current for years to come.',
+      responsibilities: ['Front End Development', 'Responsive Design', 'Data Management'],
+      technologies: ['React', 'Javascript/ES6', 'HTML5', 'SASS', 'Webpack', 'EsLint', 'Babel'],
+      image: '../images/projects/lynberg-project.png',
+      href: 'http://www.lynberg.com/',
     },
   },
   projectFive: {

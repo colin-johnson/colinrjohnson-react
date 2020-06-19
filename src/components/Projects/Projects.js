@@ -56,11 +56,11 @@ export default class Projects extends Component {
           {/* this.renderContent(data.projectOne,   0.5) */}
           {this.renderContent(data.projectTwo, 0.5)}
           {this.renderContent(data.projectThree, 1)}
-          {/* this.renderContent(data.projectFour, 1.5) */}
-          {this.renderContent(data.projectFive, 1.5)}
-          {this.renderContent(data.projectSix, 2)}
-          {this.renderContent(data.projectSeven, 2.5)}
-          {this.renderContent(data.projectEight, 3)}
+          {this.renderContent(data.projectFour, 1.5)}
+          {this.renderContent(data.projectFive, 2)}
+          {this.renderContent(data.projectSix, 2.5)}
+          {this.renderContent(data.projectSeven, 3)}
+          {this.renderContent(data.projectEight, 3.5)}
 
           <ProjectModal
             isOpen={this.state.isModalOpen}
