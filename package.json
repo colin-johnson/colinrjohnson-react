@@ -1,32 +1,28 @@
 {
-  "name": "colin-johnson-portfolio",
-  "version": "0.1.0",
-  "private": true,
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "client": "npm run start --prefix app",
+    "dev": "concurrently \"npm run start\" \"npm run client\"",
+    "prettier": "prettier --write './app/src/**/*.{scss,js,md}' './{middlewares,models,routes}/**/*.js'",
+    "heroku-postbuild": "cd app && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "babel-eslint": "^7.1.1",
-    "eslint": "^3.16.1",
-    "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.0",
-    "false": "0.0.4",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-gsap-enhancer": "^0.3.0",
-    "react-router": "^3.0.2"
+    "concurrently": "^4.1.1",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1"
   },
   "devDependencies": {
-    "node-sass": "^4.5.0",
-    "npm-run-all": "^4.0.2",
-    "react-scripts": "0.9.3"
+    "@babel/core": "^7.8.6",
+    "@babel/node": "^7.8.4",
+    "prettier": "^1.19.1"
   },
-  "scripts": {
-    "build-css": "node-sass --include-path scss src/stylesheets/main.scss -o public/",
-    "watch-css": "npm run build-css && node-sass src/ -o public/ --watch --recursive",
-    "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
-    "build": "npm run build-css && react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+  "engines": {
+    "node": "10.12.0"
   }
 }
